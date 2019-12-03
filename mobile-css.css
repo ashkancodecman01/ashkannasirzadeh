@@ -45,6 +45,16 @@
     animation: dash3 2s linear alternate;
     animation-fill-mode: forwards;
 }
+.site-link1 {
+    position: fixed;
+    left: 20%;
+    bottom: 10px;
+}
+.site-link2 {
+    position: fixed;
+    right: 20%;
+    bottom: 10px;
+}
 @keyframes dash3 {
   from {
     color: white;

@@ -2,7 +2,7 @@ jQuery(document).ready(function($) {
     var array = [
         ['1', 'MyThinks', ''],
         ['2', 'ashkan-nasirzadeh.ir', 'http://www.ashkan-nasirzadeh.ir/'],
-        ['3', 'sitemap', '']
+        ['3', 'sitemap', 'http://www.ashkan-nasirzadeh.ir/sitemap/index.html']
     ];
 
 
