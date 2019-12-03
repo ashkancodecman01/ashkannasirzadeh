@@ -1,0 +1,56 @@
+@font-face {
+  font-family: arbutus;
+  src: url('../fonts/ArbutusSlab-Regular.ttf');
+}
+* {
+  font-family: arbutus !important;
+}
+body {
+  padding: 0;
+  margin: 0;
+  background-color: ghostwhite;
+  color: gray;
+}
+a {
+  color: blue;
+  text-decoration: none;
+  cursor: pointer;
+}
+.nav > div, .nav > a > div {
+  /* border: 3px solid green; */
+  cursor: pointer;
+  user-select: none;
+  box-sizing: border-box;
+}
+.nav > div > div, .nav > a > div > div {
+  border-left: 3px solid deepskyblue;
+  padding-left: 5px;
+  margin-left: 50px;
+  box-sizing: border-box;
+}
+div[data-list-parent] {
+  display: none;
+}
+.nav {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+.btns {
+    position: relative;
+    border-bottom: 1px solid gray;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+.btn {
+    border: 1px solid deepskyblue;
+    background-color: deepskyblue;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    display: inline-block;
+    padding: 6px;
+    margin: 5px;
+    border-radius: 10px;
+}

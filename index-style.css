@@ -100,6 +100,16 @@ path {
     animation-delay: 1s;
     animation-fill-mode: forwards;
 }
+.site-link1 {
+    position: fixed;
+    left: 20%;
+    bottom: 10px;
+}
+.site-link2 {
+    position: fixed;
+    right: 20%;
+    bottom: 10px;
+}
 @keyframes dash {
   0% {
     stroke-dashoffset: 1000;
