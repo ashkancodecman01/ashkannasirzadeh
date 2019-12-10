@@ -4,10 +4,25 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-:root	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\mobile-css.css	/^:root {$/;"	function	line:1
-@font-face	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\mobile-css.css	/^@font-face {$/;"	function	line:6
-.rasmi-pic	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\mobile-css.css	/^.rasmi-pic {$/;"	function	line:10
-.mail	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\mobile-css.css	/^.mail {$/;"	function	line:26
-@keyframes dash3	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\mobile-css.css	/^@keyframes dash3 {$/;"	function	line:48
-from	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\mobile-css.css	/^  from {$/;"	function	line:49
-to	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\mobile-css.css	/^  to {$/;"	function	line:52
+html	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\desktop-index.html	/^<html lang="en">$/;"	function	line:6
+head	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\desktop-index.html	/^<head>$/;"	function	line:8
+meta	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\desktop-index.html	/^    <meta charset="UTF-8">$/;"	function	line:9
+meta	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\desktop-index.html	/^    <meta name="viewport" content="width=device-width, initial-scale=1.0">$/;"	function	line:10
+meta	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\desktop-index.html	/^    <meta http-equiv="X-UA-Compatible" content="ie=edge">$/;"	function	line:11
+script	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\desktop-index.html	/^    <script type="text\/javascript" src="https:\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/1.4.2\/jquery.min.js"><\/script>$/;"	function	line:12
+script	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\desktop-index.html	/^    <script type="text\/javascript" src="assets\/libs\/svg.js"><\/script>$/;"	function	line:13
+link	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\desktop-index.html	/^    <link rel="stylesheet" type="text\/css" href="assets\/homepage\/css\/homepage-desktop.css">$/;"	function	line:14
+link	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\desktop-index.html	/^    <link rel="icon" type="image\/png" sizes="192x192" href="assets\/homepage\/media\/favicon.ico">$/;"	function	line:15
+title	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\desktop-index.html	/^    <title>ashkan nasirzadeh<\/title>$/;"	function	line:16
+body	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\desktop-index.html	/^<body>$/;"	function	line:19
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\desktop-index.html	/^    <div class="blured-bg"><\/div>$/;"	function	line:20
+script	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\desktop-index.html	/^    <script type="text\/javascript" src="assets\/homepage\/js\/index.js"><\/script>$/;"	function	line:21
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\desktop-index.html	/^    <div id="console"><\/div>$/;"	function	line:22
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\desktop-index.html	/^    <div class="rasmi-pic"><\/div>$/;"	function	line:23
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\desktop-index.html	/^    <div class="mail">ashkan.nasirzadeh@gmail.com<\/div>$/;"	function	line:24
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\desktop-index.html	/^    <div class="drawing-c">$/;"	function	line:25
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\desktop-index.html	/^        <div id="drawing"><\/div>$/;"	function	line:26
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\desktop-index.html	/^    <div class="site-link1"><a href="\/mobile\/homepage">mobile view<\/a><\/div>$/;"	function	line:28
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\desktop-index.html	/^    <div class="site-link2"><a href="sitemap">site map<\/a><\/div>$/;"	function	line:29
+script	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\desktop-index.html	/^    <script type="text\/javascript" src="assets\/homepage\/js\/index2.js"><\/script>$/;"	function	line:30
+script	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\desktop-index.html	/^    <script type="text\/javascript" src="assets\/homepage\/js\/index3.js"><\/script>$/;"	function	line:31
