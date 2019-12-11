@@ -1,0 +1,57 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+$base-color: whitesmoke;
+$fullWidthSize: 100%;
+$break-small: 500px;
+$desktop-padding-hor: 10%;
+$desktop-padding-ver: 2%;
+$mobile-padding-hor: 2%;
+$mobile-padding-ver: 1%;
+$b: 'border';
+$v1: 1px solid red;
+$v2: 1px solid blue;
+$v3: 1px solid green;
+$v4: 1px solid purple;
+body {
+    background-color: $base-color;
+    font-family: english1;
+    @media screen and (max-width: $break-small) {
+    }
+}
+@font-face {
+  font-family: english1;
+  src: url(../../fonts/ArbutusSlab-Regular.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+.full-width-c {
+    #{$b}: $v1;
+    position: relative;
+    width: $fullWidthSize;
+    margin: auto;
+    left: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.normal-paragraph {
+    #{$b}: $v2;
+    box-sizing: border-box;
+    padding-left: $desktop-padding-hor;
+    padding-right: $desktop-padding-hor;
+    padding-top: $desktop-padding-ver;
+    padding-bottom: $desktop-padding-ver;
+    @media screen and (max-width: $break-small) {
+        padding-left: $mobile-padding-hor;
+        padding-right: $mobile-padding-hor;
+        padding-top: $mobile-padding-ver;
+        padding-bottom: $mobile-padding-ver;
+    }
+}
+.per {
+    direction: rtl;
+}
