@@ -17,6 +17,7 @@ body {
     background-color: $base-color;
     font-family: english1;
     @media screen and (max-width: $break-small) {
+        font-size: 0.9rem;
     }
 }
 @font-face {
