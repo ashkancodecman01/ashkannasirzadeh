@@ -1,7 +1,7 @@
 ---
 # Front matter comment to ensure Jekyll properly reads file.
 ---
-$base-color: whitesmoke;
+$base-color: midnightblue;
 $fullWidthSize: 100%;
 $break-small: 500px;
 $desktop-padding-hor: 10%;
@@ -9,20 +9,59 @@ $desktop-padding-ver: 2%;
 $mobile-padding-hor: 2%;
 $mobile-padding-ver: 1%;
 $b: 'border';
-$v1: 1px solid red;
-$v2: 1px solid blue;
-$v3: 1px solid green;
-$v4: 1px solid purple;
+// $v1: 1px solid transparent;
+// $v2: 1px solid transparent;
+// $v3: 1px solid transparent;
+// $v4: 1px solid transparent;
+$v1: 3px solid red;
+$v2: 3px solid blue;
+$v3: 3px solid green;
+$v4: 3px solid purple;
 body {
     background-color: $base-color;
     font-family: english1;
+    color: white;
     @media screen and (max-width: $break-small) {
         font-size: 0.9rem;
+    }
+}
+.per {
+    direction: rtl;
+    font-family: persian1;
+    font-size: 0.9rem;
+    @media screen and (max-width: $break-small) {
+        font-size: 0.78rem;
     }
 }
 @font-face {
   font-family: english1;
   src: url(../../fonts/ArbutusSlab-Regular.ttf);
+  font-family: persian1;
+  src: url(../../fonts/AIranianSans.ttf);
+}
+@mixin padding1 {
+    padding-left: $desktop-padding-hor;
+    padding-right: $desktop-padding-hor;
+    padding-top: $desktop-padding-ver;
+    padding-bottom: $desktop-padding-ver;
+    @media screen and (max-width: $break-small) {
+        padding-left: $mobile-padding-hor;
+        padding-right: $mobile-padding-hor;
+        padding-top: $mobile-padding-ver;
+        padding-bottom: $mobile-padding-ver;
+    }
+}
+@mixin padding2 {
+    padding-left: $desktop-padding-hor;
+    padding-right: $desktop-padding-hor;
+    padding-top: $desktop-padding-ver;
+    padding-bottom: $desktop-padding-ver;
+    @media screen and (max-width: $break-small) {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
 }
 * {
     margin: 0;
@@ -42,17 +81,38 @@ body {
 .normal-paragraph {
     #{$b}: $v2;
     box-sizing: border-box;
-    padding-left: $desktop-padding-hor;
-    padding-right: $desktop-padding-hor;
-    padding-top: $desktop-padding-ver;
-    padding-bottom: $desktop-padding-ver;
-    @media screen and (max-width: $break-small) {
-        padding-left: $mobile-padding-hor;
-        padding-right: $mobile-padding-hor;
-        padding-top: $mobile-padding-ver;
-        padding-bottom: $mobile-padding-ver;
-    }
+    @include padding1;
 }
-.per {
-    direction: rtl;
+
+.img-c {
+    @include padding2;
+    overflow: hidden;
+    #{$b}: $v3;
+}
+.img-c .img1 {
+    width: 100%;
+}
+.img-c .img2 {
+    #{$b}: $v4;
+    position: static;
+    display: block;
+    max-width: 50%;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+.underPic {
+    #{$b}: $v4;
+    position: relative;
+    text-align: center;
+    font-size: 0.75rem;
+}
+.underPicPer {
+    #{$b}: $v4;
+    position: relative;
+    text-align: center;
+    font-size: 0.75rem;
+}
+.header1-c {
+    @include padding1;
 }
