@@ -53,6 +53,7 @@ body {
         padding-bottom: $mobile-padding-ver;
     }
 }
+
 @mixin padding2 {
     padding-left: $desktop-padding-hor;
     padding-right: $desktop-padding-hor;
@@ -97,6 +98,18 @@ body {
     @media screen and (max-width: $break-small) {
         padding-left: 6%;
         padding-right: 6%;
+        padding-top: $mobile-padding-ver;
+        padding-bottom: $mobile-padding-ver;
+    }
+}
+@mixin padding6 {
+    padding-left: $desktop-padding-hor + 5;
+    padding-right: $desktop-padding-hor + 5;
+    padding-top: $desktop-padding-ver;
+    padding-bottom: $desktop-padding-ver;
+    @media screen and (max-width: $break-small) {
+        padding-left: $mobile-padding-hor + 5;
+        padding-right: $mobile-padding-hor + 5;
         padding-top: $mobile-padding-ver;
         padding-bottom: $mobile-padding-ver;
     }
@@ -212,6 +225,28 @@ body {
 }
 .header1-c {
     @include padding1;
+}
+.hr-div {
+    @include padding1;
+}
+.hr-div .hr {
+    border-top: 1px solid gray;
+}
+.forpadding {
+    @include padding6;
+}
+blockquote {
+    padding-left: 10px;
+    padding-right: 10px;
+    border-left: 1px solid white;
+    border-radius: 6px;
+}
+blockquote.perblockquote {
+    padding-left: 10px;
+    padding-right: 10px;
+    border-right: 1px solid white;
+    border-left: none;
+    border-radius: 6px;
 }
 .code-c {
     #{$b}: $v3;
