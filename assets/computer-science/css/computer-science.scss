@@ -78,6 +78,9 @@ body {
     margin: 0;
     box-sizing: border-box;
 }
+.topGap {
+    margin-top: 40px;
+}
 .normal-paragraph {
     #{$b}: $v2;
     box-sizing: border-box;
