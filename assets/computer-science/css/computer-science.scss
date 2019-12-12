@@ -17,6 +17,14 @@ $v1: 3px solid red;
 $v2: 3px solid blue;
 $v3: 3px solid green;
 $v4: 3px solid purple;
+@font-face {
+    font-family: english1;
+    src: url(../../fonts/ArbutusSlab-Regular.ttf);
+}
+@font-face {
+    font-family: persian1;
+    src: url(../../fonts/AIranianSans.ttf);
+}
 body {
     background-color: $base-color;
     font-family: english1;
@@ -27,17 +35,11 @@ body {
 }
 .per {
     direction: rtl;
-    font-family: persian1;
+    font-family: persian1 !important;
     font-size: 0.9rem;
     @media screen and (max-width: $break-small) {
         font-size: 0.78rem;
     }
-}
-@font-face {
-  font-family: english1;
-  src: url(../../fonts/ArbutusSlab-Regular.ttf);
-  font-family: persian1;
-  src: url(../../fonts/AIranianSans.ttf);
 }
 @mixin padding1 {
     padding-left: $desktop-padding-hor;
@@ -68,6 +70,30 @@ body {
     padding-right: $desktop-padding-hor;
     padding-top: $desktop-padding-ver;
     padding-bottom: $desktop-padding-ver;
+    @media screen and (max-width: $break-small) {
+        padding-left: 6%;
+        padding-right: 6%;
+        padding-top: $mobile-padding-ver;
+        padding-bottom: $mobile-padding-ver;
+    }
+}
+@mixin padding4 {
+    padding-left: $desktop-padding-hor;
+    padding-right: $desktop-padding-hor;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    @media screen and (max-width: $break-small) {
+        padding-left: 6%;
+        padding-right: 6%;
+        padding-top: $mobile-padding-ver;
+        padding-bottom: $mobile-padding-ver;
+    }
+}
+@mixin padding5 {
+    padding-left: $desktop-padding-hor;
+    padding-right: $desktop-padding-hor;
+    padding-top: 0;
+    padding-bottom: 2%;
     @media screen and (max-width: $break-small) {
         padding-left: 6%;
         padding-right: 6%;
@@ -124,12 +150,52 @@ body {
     position: relative;
     text-align: center;
     font-size: 0.75rem;
+    padding-top: 2px;
 }
 .underPicPer {
     #{$b}: $v4;
+    font-family: persian1;
     position: relative;
     text-align: center;
     font-size: 0.75rem;
+    padding-top: 2px;
+}
+.header-c {
+    @include padding5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+}
+.header-under-c {
+    @include padding5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.6rem;
+}
+.header-under2-c {
+    @include padding5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.6rem;
+}
+.writerpic {
+    display: block;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.header-under-c-per {
+    @include padding5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.5rem;
 }
 .header1-c {
     @include padding1;
@@ -152,4 +218,47 @@ body {
     width: 100%;
     height: 100%;
     box-sizing: border-box;
+}
+.page-alert-c {
+    @include padding4;
+    overflow: hidden;
+}
+.page-alert-c > div {
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.alert-message {
+    #{$b}: $v3;
+    width: 95%;
+    position: relative;
+    float: left;
+    box-sizing: border-box;
+    font-family: english1;
+}
+.close-icon {
+    #{$b}: $v3;
+    width: 5%;
+    position: relative;
+    float: left;
+    box-sizing: border-box;
+    font-weight: 900;
+    font-size: 4rem;
+    line-height: 100%;
+    top: -2px;
+    cursor: pointer;
+}
+.close-icon:hover {
+    color: darkred;
+}
+.danger {
+    background-color: red;
+}
+.warning {
+    background-color: gold;
+    color: black;
+}
+.info {
+    background-color: dodgerblue;
 }
