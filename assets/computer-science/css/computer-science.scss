@@ -63,6 +63,18 @@ body {
         padding-bottom: 0;
     }
 }
+@mixin padding3 {
+    padding-left: $desktop-padding-hor;
+    padding-right: $desktop-padding-hor;
+    padding-top: $desktop-padding-ver;
+    padding-bottom: $desktop-padding-ver;
+    @media screen and (max-width: $break-small) {
+        padding-left: 6%;
+        padding-right: 6%;
+        padding-top: $mobile-padding-ver;
+        padding-bottom: $mobile-padding-ver;
+    }
+}
 * {
     margin: 0;
     padding: 0;
@@ -121,4 +133,23 @@ body {
 }
 .header1-c {
     @include padding1;
+}
+.code-c {
+    #{$b}: $v3;
+    @include padding3;
+}
+.code-c code {
+    display: block;
+    position: relative;
+    background-color: whitesmoke;
+    margin: auto;
+    left: 0;
+    right: 0;
+    padding: 6px;
+    border-radius: 5px;
+    font-size: 1.1rem !important;
+    font-weight: 900;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
 }
