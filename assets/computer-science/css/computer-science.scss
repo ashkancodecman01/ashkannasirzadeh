@@ -166,6 +166,9 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 3rem;
+    @media screen and (max-width: $break-small) {
+        font-size: 1.8rem;
+    }
 }
 .header-under-c {
     @include padding5;
@@ -173,6 +176,9 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 0.6rem;
+    @media screen and (max-width: $break-small) {
+        font-size: 0.5rem;
+    }
 }
 .header-under2-c {
     @include padding5;
@@ -180,6 +186,9 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 0.6rem;
+    @media screen and (max-width: $break-small) {
+        font-size: 0.5rem;
+    }
 }
 .writerpic {
     display: block;
@@ -189,6 +198,10 @@ body {
     border-radius: 100%;
     padding-left: 10px;
     padding-right: 10px;
+    @media screen and (max-width: $break-small) {
+        width: 75px;
+        height: 75px;
+    }
 }
 .header-under-c-per {
     @include padding5;
