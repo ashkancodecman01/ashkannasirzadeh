@@ -288,6 +288,7 @@ blockquote.perblockquote {
     justify-content: center;
     @media screen and (max-width: $break-small) {
         width: 20%;
+        border: 3px solid red;
     }
 }
 .note-text {
