@@ -83,8 +83,8 @@ $v4: 1px solid transparent;
     padding-top: $desktop-padding-ver;
     padding-bottom: $desktop-padding-ver;
     @media screen and (max-width: $break-small) {
-        padding-left: $mobile-padding-hor;
-        padding-right: $mobile-padding-hor;
+        padding-left: $mobile-padding-hor + 2.5;
+        padding-right: $mobile-padding-hor + 2.5;
         padding-top: $mobile-padding-ver;
         padding-bottom: $mobile-padding-ver;
     }
@@ -286,10 +286,16 @@ blockquote.perblockquote {
     float: left;
     display: flex;
     justify-content: center;
+    @media screen and (max-width: $break-small) {
+        width: 20%;
+    }
 }
 .note-text {
     width: 90%;
     float: left;
+    @media screen and (max-width: $break-small) {
+        width: 80%;
+    }
 }
 .code-c {
     #{$b}: $v3;
