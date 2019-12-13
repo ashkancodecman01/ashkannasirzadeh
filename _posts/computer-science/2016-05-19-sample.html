@@ -37,6 +37,16 @@ permalink: /computer science
             <img src="{{sample-img-address}}" class='img1' alt="">
         </div>
     </div>
+    <div class="full-width-c">
+        <div class="forpadding">
+            <a class='headsListClass' href="#heading1 head">heading1 head</a>
+        </div>
+    </div>
+    <div class="full-width-c">
+        <div class="forpadding">
+            <a class='headsListClass headsListClassPer' href="#heading1 head">مقدمه</a>
+        </div>
+    </div>
     <div class="full-width-c topGap">
         <div class="header-c">
             <h1>header1</h1>
@@ -74,9 +84,9 @@ permalink: /computer science
             <h1>اشکان نصیرزاده</h1>
         </div>
     </div>
-    <div class="full-width-c topGap">
+    <div class="full-width-c topGap" id="heading1 head">
         <div class="header1-c">
-            <h1>header1</h1>
+            <h1>pointForMe</h1>
         </div>
     </div>
     <div class="full-width-c topGap">
@@ -130,6 +140,22 @@ permalink: /computer science
         </div>
     </div>
     <div class="full-width-c">
+        <div class="forpadding">
+            <div class="note-c">
+                <div class="note-number-c">note1:</div>
+                <div class="note-text">hello world</div>
+            </div>
+        </div>
+    </div>
+    <div class="full-width-c">
+        <div class="forpadding">
+            <div class="note-c per">
+            <div class="note-text">سلام بر جهان امروز</div>
+                <div class="note-number-c">نکته ی ۱:</div>
+            </div>
+        </div>
+    </div>
+    <div class="full-width-c">
         <p class="normal-paragraph per">شدار سامانه همتا: حتما در زمان تحویل دستگاهشدار سامانه همتا: حتما در زمان تحویل دستگاهشدار سامانه همتا: حتما در زمان تحویل دستگاهشدار سامانه همتا: حتما در زمان تحویل دستگاهشدار سامانه همتا: حتما در زمان تحویل دستگاهشدار سامانه همتا: حتما در زمان تحویل دستگاهشدار سامانه همتا: حتما در زمان تحویل دستگاهشدار سامانه همتا: حتما در زمان تحویل دستگاهشدار سامانه همتا: حتما در زمان تحویل دستگاهشدار سامانه همتا: حتما در زمان تحویل دستگاهشدار سامانه همتا: حتما در زمان تحویل دستگاهشدار سامانه همتا: حتما در زمان تحویل دستگاهشدار سامانه همتا: حتما در زمان تحویل دستگاهشدار سامانه همتا: حتما در زمان تحویل دستگاهشدار سامانه همتا: حتما در زمان تحویل دستگاهشدار سامانه همتا: حتما در زمان تحویل دستگاهشدار سامانه همتا: حتما در زمان تحویل دستگاهشدار سامانه همتا: حتما در زمان تحویل دستگاهشدار سامانه همتا: حتما در زمان تحویل دستگاهشدار سامانه همتا: حتما در زمان تحویل دستگاه</p>
     </div>
     <div class="full-width-c">
@@ -137,5 +163,15 @@ permalink: /computer science
             <code class="prettyprint">var a = 'ali';</code>
         </div>
     </div>
+    <!-- <script src="custom-js-1"> -->
+    <script type="text/javascript">
+        $('img').click(function () {
+            let location = $(this).attr('src');
+            window.open(location, '_blank');
+        });
+        $('.close-icon').click(function () {
+            $(this).parents('.full-width-c').css('display', 'none');
+        })
+    </script>
 </body>
 </html>

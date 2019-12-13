@@ -9,31 +9,15 @@ $desktop-padding-ver: 2%;
 $mobile-padding-hor: 2%;
 $mobile-padding-ver: 1%;
 $b: 'border';
-// $v1: 1px solid transparent;
-// $v2: 1px solid transparent;
-// $v3: 1px solid transparent;
-// $v4: 1px solid transparent;
-$v1: 3px solid red;
-$v2: 3px solid blue;
-$v3: 3px solid green;
-$v4: 3px solid purple;
-@font-face {
-    font-family: english1;
-    src: url(../../fonts/ArbutusSlab-Regular.ttf);
-}
-@font-face {
-    font-family: persian1;
-    src: url(../../fonts/AIranianSans.ttf);
-}
-body {
-    background-color: $base-color;
-    font-family: english1;
-    color: white;
-    @media screen and (max-width: $break-small) {
-        font-size: 0.9rem;
-    }
-}
-.per {
+$v1: 1px solid transparent;
+$v2: 1px solid transparent;
+$v3: 1px solid transparent;
+$v4: 1px solid transparent;
+// $v1: 3px solid red;
+// $v2: 3px solid blue;
+// $v3: 3px solid green;
+// $v4: 3px solid purple;
+@mixin per {
     direction: rtl;
     font-family: persian1 !important;
     font-size: 0.9rem;
@@ -67,16 +51,7 @@ body {
     }
 }
 @mixin padding3 {
-    padding-left: $desktop-padding-hor;
-    padding-right: $desktop-padding-hor;
-    padding-top: $desktop-padding-ver;
-    padding-bottom: $desktop-padding-ver;
-    @media screen and (max-width: $break-small) {
-        padding-left: 6%;
-        padding-right: 6%;
-        padding-top: $mobile-padding-ver;
-        padding-bottom: $mobile-padding-ver;
-    }
+
 }
 @mixin padding4 {
     padding-left: $desktop-padding-hor;
@@ -108,10 +83,53 @@ body {
     padding-top: $desktop-padding-ver;
     padding-bottom: $desktop-padding-ver;
     @media screen and (max-width: $break-small) {
-        padding-left: $mobile-padding-hor + 5;
-        padding-right: $mobile-padding-hor + 5;
+        padding-left: $mobile-padding-hor;
+        padding-right: $mobile-padding-hor;
         padding-top: $mobile-padding-ver;
         padding-bottom: $mobile-padding-ver;
+    }
+}
+@font-face {
+    font-family: english1;
+    src: url(../../fonts/ArbutusSlab-Regular.ttf);
+}
+@font-face {
+    font-family: persian1;
+    src: url(../../fonts/AIranianSans.ttf);
+}
+body {
+    background-color: $base-color;
+    font-family: english1;
+    color: white;
+    @media screen and (max-width: $break-small) {
+        font-size: 0.9rem;
+    }
+}
+img {
+    cursor: pointer;
+}
+.headsListClass {
+    border-left: 3px solid white;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    cursor: pointer;
+    display: block;
+}
+.forpadding a.headsListClassPer {
+    @include per;
+    border-left: 3px solid transparent;
+    padding-left: 0px;
+    border-right: 3px solid white;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    display: block;
+}
+.per {
+    direction: rtl;
+    font-family: persian1 !important;
+    font-size: 0.9rem;
+    @media screen and (max-width: $break-small) {
+        font-size: 0.78rem;
     }
 }
 * {
@@ -248,9 +266,34 @@ blockquote.perblockquote {
     border-left: none;
     border-radius: 6px;
 }
+.note-c {
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 5px;
+    position: relative;
+    height: auto;
+    display: inline-block;
+    width: 100%;
+}
+.note-c > div {
+    position: relative;
+    box-sizing: border-box;
+    #{$b}: $v1;
+    overflow: hidden;
+}
+.note-number-c {
+    width: 10%;
+    float: left;
+    display: flex;
+    justify-content: center;
+}
+.note-text {
+    width: 90%;
+    float: left;
+}
 .code-c {
     #{$b}: $v3;
-    @include padding3;
+    @include padding6;
 }
 .code-c code {
     display: block;
