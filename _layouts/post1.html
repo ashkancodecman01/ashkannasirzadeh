@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/gif" href='{{page.pageFaviconAddress}}' id='test'/>
+    <link rel="stylesheet" href="assets/computer-science/css/computer-science.css">
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <title>{{ page.title }}</title>
+</head>
+<body>
+
+{% for data-item in site.data[page.sjcm] %}
+    {% if data-item.type == "img" and data-item.group == "intro-img" %}
+        <div class="full-width-c">
+            <div class="img-c">
+                <img src="{{data-item.content}}" class='img1' alt="">
+            </div>
+        </div>
+    {% endif %}
+{% endfor %}
+
+{% for data-item in site.data[page.sjcm] %}
+    {% if data-item.type == "text" and data-item.group == "intro-text" %}
+        <div class="full-width-c">
+            <div class="header-under-c">
+                <h1>{{data-item.content}}</h1>
+            </div>
+        </div>
+    {% endif %}
+{% endfor %}
+{% for data-item in site.data[page.sjcm] %}
+    {% if data-item.type == "text" and data-item.group == "intro-author" %}
+        <div class="full-width-c">
+            <div class="header-under2-c">
+                <img src="assets/computer-science/pics/test.jpg" alt="" class="writerpic">
+                <h1>{{data-item.content}}</h1>
+            </div>
+        </div>
+    {% endif %}
+{% endfor %}
+
+{% for data-item in site.data[page.sjcm] %}
+    {% if data-item.type == "bdi-text" and data-item.group == "intro-text" %}
+        <div class="full-width-c topGap">
+            <div class="header-c per">
+                <h1>{{data-item.content}}</h1>
+            </div>
+        </div>
+    {% endif %}
+{% endfor %}
+{% for data-item in site.data[page.sjcm] %}
+    {% if data-item.type == "bdi-text" and data-item.group == "intro-author" %}
+        <div class="full-width-c">
+            <div class="header-under-c-per per">
+                <img src="assets/computer-science/pics/test.jpg" alt="" class="writerpic">
+                <h1>{{data-item.content}}</h1>
+            </div>
+        </div>
+    {% endif %}
+{% endfor %}
+
+<div class="full-width-c">
+    <div class="forpadding">
+        {% for data-item in site.data[page.sjcm] %}
+            {% if data-item.type == "text" and data-item.group == "head1" %}
+                <a class='headsListClass' href="#{{data-item.content | strip}}">{{data-item.content | strip}}</a>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+<div class="full-width-c">
+    <div class="forpadding">
+        {% for data-item in site.data[page.sjcm] %}
+            {% if data-item.type == "bdi-text" and data-item.group == "head1" %}
+                <a class='headsListClass headsListClassPer' href="#{{data-item.content | strip}}">{{data-item.content | strip}}</a>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+
+{% for data-item in site.data[page.sjcm] %}
+    {% if data-item.type == "noti" and data-item.group == "info" %}
+        <div class="full-width-c">
+            <div class="page-alert-c info">
+                <div class="alert-message">{{ data-item.content }}</div>
+                <div class="close-icon">&times;</div>
+            </div>
+        </div>
+    {% elsif data-item.type == "noti" and data-item.group == "warning" %}
+        <div class="full-width-c">
+            <div class="page-alert-c warning">
+                <div class="alert-message">{{ data-item.content }}</div>
+                <div class="close-icon">&times;</div>
+            </div>
+        </div>
+    {% elsif data-item.type == "noti" and data-item.group == "danger" %}
+        <div class="full-width-c">
+            <div class="page-alert-c danger">
+                <div class="alert-message">{{ data-item.content }}</div>
+                <div class="close-icon">&times;</div>
+            </div>
+        </div>
+    {% elsif data-item.type == "bdi-noti" and data-item.group == "info" %}
+        <div class="full-width-c">
+            <div class="page-alert-c info">
+                <div class="alert-message per">{{ data-item.content }}</div>
+                <div class="close-icon">&times;</div>
+            </div>
+        </div>
+    {% elsif data-item.type == "bdi-noti" and data-item.group == "warning" %}
+        <div class="full-width-c">
+            <div class="page-alert-c warning">
+                <div class="alert-message per">{{ data-item.content }}</div>
+                <div class="close-icon">&times;</div>
+            </div>
+        </div>
+    {% elsif data-item.type == "bdi-noti" and data-item.group == "danger" %}
+        <div class="full-width-c">
+            <div class="page-alert-c danger">
+                <div class="alert-message per">{{ data-item.content }}</div>
+                <div class="close-icon">&times;</div>
+            </div>
+        </div>
+    {% elsif data-item.type == "text" and data-item.group == "intro-head" %}
+        <div class="full-width-c topGap">
+            <div class="header-c">
+                <h1>{{ data-item.content }}</h1>
+            </div>
+        </div>
+    {% elsif data-item.type == "text" and data-item.group == "head1" %}
+        <div class="full-width-c topGap" id="{{data-item.content | strip}}">
+            <div class="header1-c">
+                <h1>{{ data-item.content }}</h1>
+            </div>
+        </div>
+        <!-- <script type="text/javascript">
+            let shit = '\'' + {{data-item.content}} + '\''
+            console.log(shit.toString());
+        </script> -->
+    {% elsif data-item.type == "text" and data-item.group == "head2" %}
+        <div class="full-width-c topGap">
+            <div class="header1-c">
+                <h2>{{ data-item.content }}</h2>
+            </div>
+        </div>
+    {% elsif data-item.type == "text" and data-item.group == "head3" %}
+        <div class="full-width-c topGap">
+            <div class="header1-c">
+                <h3>{{ data-item.content }}</h3>
+            </div>
+        </div>
+    {% elsif data-item.type == "bdi-text" and data-item.group == "head1" %}
+        <div class="full-width-c topGap" id="{{data-item.content | strip}}">
+            <div class="header1-c per">
+                <h1>{{ data-item.content }}</h1>
+            </div>
+        </div>
+    {% elsif data-item.type == "bdi-text" and data-item.group == "head2" %}
+        <div class="full-width-c topGap">
+            <div class="header1-c per">
+                <h2>{{ data-item.content }}</h2>
+            </div>
+        </div>
+    {% elsif data-item.type == "bdi-text" and data-item.group == "head3" %}
+        <div class="full-width-c topGap">
+            <div class="header1-c per">
+                <h3>{{ data-item.content }}</h3>
+            </div>
+        </div>
+    {% elsif data-item.type == "text" and data-item.group == "para" %}
+        <div class="full-width-c">
+            <p class="normal-paragraph">{{ data-item.content }}</p>
+        </div>
+    {% elsif data-item.type == "bdi-text" and data-item.group == "para" %}
+        <div class="full-width-c">
+            <p class="normal-paragraph per">{{ data-item.content }}</p>
+        </div>
+    {% elsif data-item.type == "text" and data-item.group == "blockquote" %}
+        <div class="full-width-c">
+            <div class="forpadding">
+                <blockquote>{{ data-item.content }}</blockquote>
+            </div>
+        </div>
+    {% elsif data-item.type == "bdi-text" and data-item.group == "blockquote" %}
+        <div class="full-width-c">
+            <div class="forpadding">
+                <blockquote class="perblockquote per">{{ data-item.content }}</blockquote>
+            </div>
+        </div>
+    {% elsif data-item.type == "text" and data-item.group == "hr" %}
+        <div class="full-width-c">
+            <div class="hr-div">
+                <div class="hr"></div>
+            </div>
+        </div>
+    {% elsif data-item.type == "img" and data-item.group == "img-style1" %}
+        <div class="full-width-c topGap">
+            <div class="img-c">
+                <img src="assets/computer-science/pics/test.jpg" class='img2' alt="">
+                <p class="underPic">{{ data-item.content }}</p>
+            </div>
+        </div>
+    {% elsif data-item.type == "bdi-img" and data-item.group == "img-style1" %}
+        <div class="full-width-c topGap">
+            <div class="img-c">
+                <img src="assets/computer-science/pics/test.jpg" class='img2' alt="">
+                <p class="underPicPer">{{ data-item.content }}</p>
+            </div>
+        </div>
+    {% elsif data-item.type == "text" and data-item.group == "note" %}
+    <!-- {% increment counter1 %} -->
+        <div class="full-width-c">
+            <div class="forpadding">
+                <div class="note-c">
+                    <div class="note-number-c">note {{ counter1 }} :</div>
+                    <div class="note-text">{{ data-item.content }}</div>
+                </div>
+            </div>
+        </div>
+    {% elsif data-item.type == "bdi-text" and data-item.group == "note" %}
+    <!-- {% increment counter2 %} -->
+        <div class="full-width-c">
+            <div class="forpadding">
+                <div class="note-c per">
+                <div class="note-text">{{ data-item.content }}</div>
+                    <div class="note-number-c">نکته ی {{ counter2 }} :</div>
+                </div>
+            </div>
+        </div>
+    {% elsif data-item.type == "text" and data-item.group == "code" %}
+        <div class="full-width-c">
+            <div class="code-c">
+                <code class="prettyprint">{{ data-item.content }}</code>
+            </div>
+        </div>
+    {% endif %}
+{% endfor %}
+<script type="text/javascript">
+    $('img').click(function () {
+        let location = $(this).attr('src');
+        window.open(location, '_blank');
+    });
+    $('.close-icon').click(function () {
+        $(this).parents('.full-width-c').css('display', 'none');
+    })
+</script>
+</body>
+</html>
