@@ -4,25 +4,120 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-html	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\desktop-index.html	/^<html lang="en">$/;"	function	line:6
-head	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\desktop-index.html	/^<head>$/;"	function	line:8
-meta	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\desktop-index.html	/^    <meta charset="UTF-8">$/;"	function	line:9
-meta	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\desktop-index.html	/^    <meta name="viewport" content="width=device-width, initial-scale=1.0">$/;"	function	line:10
-meta	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\desktop-index.html	/^    <meta http-equiv="X-UA-Compatible" content="ie=edge">$/;"	function	line:11
-script	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\desktop-index.html	/^    <script type="text\/javascript" src="https:\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/1.4.2\/jquery.min.js"><\/script>$/;"	function	line:12
-script	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\desktop-index.html	/^    <script type="text\/javascript" src="assets\/libs\/svg.js"><\/script>$/;"	function	line:13
-link	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\desktop-index.html	/^    <link rel="stylesheet" type="text\/css" href="assets\/homepage\/css\/homepage-desktop.css">$/;"	function	line:14
-link	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\desktop-index.html	/^    <link rel="icon" type="image\/png" sizes="192x192" href="assets\/homepage\/media\/favicon.ico">$/;"	function	line:15
-title	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\desktop-index.html	/^    <title>ashkan nasirzadeh<\/title>$/;"	function	line:16
-body	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\desktop-index.html	/^<body>$/;"	function	line:19
-div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\desktop-index.html	/^    <div class="blured-bg"><\/div>$/;"	function	line:20
-script	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\desktop-index.html	/^    <script type="text\/javascript" src="assets\/homepage\/js\/index.js"><\/script>$/;"	function	line:21
-div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\desktop-index.html	/^    <div id="console"><\/div>$/;"	function	line:22
-div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\desktop-index.html	/^    <div class="rasmi-pic"><\/div>$/;"	function	line:23
-div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\desktop-index.html	/^    <div class="mail">ashkan.nasirzadeh@gmail.com<\/div>$/;"	function	line:24
-div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\desktop-index.html	/^    <div class="drawing-c">$/;"	function	line:25
-div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\desktop-index.html	/^        <div id="drawing"><\/div>$/;"	function	line:26
-div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\desktop-index.html	/^    <div class="site-link1"><a href="\/mobile\/homepage">mobile view<\/a><\/div>$/;"	function	line:28
-div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\desktop-index.html	/^    <div class="site-link2"><a href="sitemap">site map<\/a><\/div>$/;"	function	line:29
-script	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\desktop-index.html	/^    <script type="text\/javascript" src="assets\/homepage\/js\/index2.js"><\/script>$/;"	function	line:30
-script	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\desktop-index.html	/^    <script type="text\/javascript" src="assets\/homepage\/js\/index3.js"><\/script>$/;"	function	line:31
+html	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^<html lang="en">$/;"	function	line:2
+head	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^<head>$/;"	function	line:3
+meta	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^    <meta charset="UTF-8">$/;"	function	line:4
+meta	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^    <meta name="viewport" content="width=device-width, initial-scale=1.0">$/;"	function	line:5
+meta	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^    <meta http-equiv="X-UA-Compatible" content="ie=edge">$/;"	function	line:6
+script	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^    <script src="https:\/\/code.jquery.com\/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"><\/script>$/;"	function	line:7
+link	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^    <link rel="icon" type="image\/gif" href='{{page.pageFaviconAddress}}' id='test'\/>$/;"	function	line:8
+link	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^    <link rel="stylesheet" href="{{page.pageCssAddress}}">$/;"	function	line:9
+script	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^    <script src="https:\/\/cdn.jsdelivr.net\/gh\/google\/code-prettify@master\/loader\/run_prettify.js"><\/script>$/;"	function	line:10
+title	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^    <title>{{ page.title }}<\/title>$/;"	function	line:11
+body	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^<body>$/;"	function	line:13
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^        <div class="full-width-c">$/;"	function	line:17
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^            <div class="img-c">$/;"	function	line:18
+img	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^                <img src="{{data-item.content}}" class='img1' alt="">$/;"	function	line:19
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^        <div class="full-width-c topGap">$/;"	function	line:27
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^            <div class="header-c">$/;"	function	line:28
+h	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^                <h1>{{data-item.content}}<\/h1>$/;"	function	line:29
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^        <div class="full-width-c topGap">$/;"	function	line:36
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^            <div class="header-c per">$/;"	function	line:37
+h	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^                <h1>{{data-item.content}}<\/h1>$/;"	function	line:38
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^        <div class="full-width-c">$/;"	function	line:46
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^            <div class="header-under-c">$/;"	function	line:47
+h	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^                <h1>{{data-item.content}}<\/h1>$/;"	function	line:48
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^        <div class="full-width-c">$/;"	function	line:55
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^            <div class="header-under-c per">$/;"	function	line:56
+h	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^                <h1>{{ data-item.content }}<\/h1>$/;"	function	line:57
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^        <div class="full-width-c">$/;"	function	line:65
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^            <div class="header-under2-c">$/;"	function	line:66
+img	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^                <img src="{{data-item.content.pic}}" alt="" class="writerpic">$/;"	function	line:67
+h	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^                <h1>{{data-item.content.name}}<\/h1>$/;"	function	line:68
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^        <div class="full-width-c">$/;"	function	line:75
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^            <div class="header-under-c-per per">$/;"	function	line:76
+img	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^                <img src="assets\/computer-science\/pics\/test.jpg" alt="" class="writerpic">$/;"	function	line:77
+h	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^                <h1>{{data-item.content}}<\/h1>$/;"	function	line:78
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^<div class="full-width-c">$/;"	function	line:84
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^    <div class="forpadding">$/;"	function	line:85
+a	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^                <a class='headsListClass' href="#{{data-item.content | strip}}">{{data-item.content | strip}}<\/a>$/;"	function	line:88
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^<div class="full-width-c">$/;"	function	line:93
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^    <div class="forpadding">$/;"	function	line:94
+a	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^                <a class='headsListClass headsListClassPer' href="#{{data-item.content | strip}}">{{data-item.content | strip}}<\/a>$/;"	function	line:97
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^        <div class="full-width-c">$/;"	function	line:105
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^            <div class="page-alert-c info">$/;"	function	line:106
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^                <div class="alert-message">{{ data-item.content }}<\/div>$/;"	function	line:107
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^                <div class="close-icon">&times;<\/div>$/;"	function	line:108
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^        <div class="full-width-c">$/;"	function	line:112
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^            <div class="page-alert-c warning">$/;"	function	line:113
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^                <div class="alert-message">{{ data-item.content }}<\/div>$/;"	function	line:114
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^                <div class="close-icon">&times;<\/div>$/;"	function	line:115
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^        <div class="full-width-c">$/;"	function	line:119
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^            <div class="page-alert-c danger">$/;"	function	line:120
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^                <div class="alert-message">{{ data-item.content }}<\/div>$/;"	function	line:121
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^                <div class="close-icon">&times;<\/div>$/;"	function	line:122
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^        <div class="full-width-c">$/;"	function	line:126
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^            <div class="page-alert-c info">$/;"	function	line:127
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^                <div class="alert-message per">{{ data-item.content }}<\/div>$/;"	function	line:128
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^                <div class="close-icon">&times;<\/div>$/;"	function	line:129
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^        <div class="full-width-c">$/;"	function	line:133
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^            <div class="page-alert-c warning">$/;"	function	line:134
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^                <div class="alert-message per">{{ data-item.content }}<\/div>$/;"	function	line:135
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^                <div class="close-icon">&times;<\/div>$/;"	function	line:136
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^        <div class="full-width-c">$/;"	function	line:140
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^            <div class="page-alert-c danger">$/;"	function	line:141
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^                <div class="alert-message per">{{ data-item.content }}<\/div>$/;"	function	line:142
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^                <div class="close-icon">&times;<\/div>$/;"	function	line:143
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^        <div class="full-width-c topGap" id="{{data-item.content | strip}}">$/;"	function	line:147
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^            <div class="header1-c">$/;"	function	line:148
+h	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^                <h1>{{ data-item.content }}<\/h1>$/;"	function	line:149
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^        <div class="full-width-c topGap">$/;"	function	line:157
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^            <div class="header1-c">$/;"	function	line:158
+h	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^                <h2>{{ data-item.content }}<\/h2>$/;"	function	line:159
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^        <div class="full-width-c topGap">$/;"	function	line:163
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^            <div class="header1-c">$/;"	function	line:164
+h	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^                <h3>{{ data-item.content }}<\/h3>$/;"	function	line:165
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^        <div class="full-width-c topGap" id="{{data-item.content | strip}}">$/;"	function	line:169
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^            <div class="header1-c per">$/;"	function	line:170
+h	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^                <h1>{{ data-item.content }}<\/h1>$/;"	function	line:171
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^        <div class="full-width-c topGap">$/;"	function	line:175
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^            <div class="header1-c per">$/;"	function	line:176
+h	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^                <h2>{{ data-item.content }}<\/h2>$/;"	function	line:177
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^        <div class="full-width-c topGap">$/;"	function	line:181
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^            <div class="header1-c per">$/;"	function	line:182
+h	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^                <h3>{{ data-item.content }}<\/h3>$/;"	function	line:183
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^        <div class="full-width-c">$/;"	function	line:187
+p	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^            <p class="normal-paragraph">{{ data-item.content }}<\/p>$/;"	function	line:188
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^        <div class="full-width-c">$/;"	function	line:191
+p	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^            <p class="normal-paragraph per">{{ data-item.content }}<\/p>$/;"	function	line:192
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^        <div class="full-width-c">$/;"	function	line:195
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^            <div class="forpadding">$/;"	function	line:196
+blockquote	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^                <blockquote>{{ data-item.content }}<\/blockquote>$/;"	function	line:197
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^        <div class="full-width-c">$/;"	function	line:201
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^            <div class="forpadding">$/;"	function	line:202
+blockquote	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^                <blockquote class="perblockquote per">{{ data-item.content }}<\/blockquote>$/;"	function	line:203
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^        <div class="full-width-c">$/;"	function	line:207
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^            <div class="hr-div">$/;"	function	line:208
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^                <div class="hr"><\/div>$/;"	function	line:209
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^        <div class="full-width-c topGap">$/;"	function	line:213
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^            <div class="img-c">$/;"	function	line:214
+img	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^                <img src="assets\/computer-science\/pics\/test.jpg" class='img2' alt="">$/;"	function	line:215
+p	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^                <p class="underPic">{{ data-item.content }}<\/p>$/;"	function	line:216
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^        <div class="full-width-c topGap">$/;"	function	line:220
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^            <div class="img-c">$/;"	function	line:221
+img	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^                <img src="assets\/computer-science\/pics\/test.jpg" class='img2' alt="">$/;"	function	line:222
+p	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^                <p class="underPicPer">{{ data-item.content }}<\/p>$/;"	function	line:223
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^        <div class="full-width-c">$/;"	function	line:228
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^            <div class="forpadding">$/;"	function	line:229
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^                <div class="note-c">$/;"	function	line:230
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^                    <div class="note-number-c">note {{ counter1 }} :<\/div>$/;"	function	line:231
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^                    <div class="note-text">{{ data-item.content }}<\/div>$/;"	function	line:232
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^        <div class="full-width-c">$/;"	function	line:238
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^            <div class="forpadding">$/;"	function	line:239
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^                <div class="note-c per">$/;"	function	line:240
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^                <div class="note-text">{{ data-item.content }}<\/div>$/;"	function	line:241
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^                    <div class="note-number-c">نکته ی {{ counter2 }} :<\/div>$/;"	function	line:242
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^        <div class="full-width-c">$/;"	function	line:247
+div	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^            <div class="code-c">$/;"	function	line:248
+code	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^                <code class="prettyprint">{{ data-item.content }}<\/code>$/;"	function	line:249
+script	C:\Users\ashkan nasirzadeh\Desktop\ashkan-nasirzadeh.ir\_layouts\post1.html	/^<script type="text\/javascript">$/;"	function	line:254

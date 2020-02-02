@@ -1,0 +1,29 @@
+@font-face {
+  font-family: shelfer;
+  src: url('data/ArbutusSlab-Regular.ttf');
+}
+body {
+  font-family: shelfer !important;
+  background-color: gray;
+  color: white;
+  cursor: default;
+}
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+}
+table td {
+  border: 1px solid dimgray;
+  text-align: center;
+  padding: 5px;
+}
+.header-td {
+  background-color: dimgray;
+}
+.pronunciation-td {
+  letter-spacing: 1px;
+}
+.audio {
+  /* display: none; */
+}

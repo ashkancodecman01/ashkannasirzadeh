@@ -6,82 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <link rel="icon" type="image/gif" href='{{page.pageFaviconAddress}}' id='test'/>
-    <link rel="stylesheet" href="assets/computer-science/css/computer-science.css">
+    <link rel="stylesheet" href="{{page.pageCssAddress}}">
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
     <title>{{ page.title }}</title>
 </head>
 <body>
-
-{% for data-item in site.data[page.sjcm] %}
-    {% if data-item.type == "img" and data-item.group == "intro-img" %}
-        <div class="full-width-c">
-            <div class="img-c">
-                <img src="{{data-item.content}}" class='img1' alt="">
-            </div>
-        </div>
+{% assign x = page.sjcm | split: '.' %}
+{% for i in x %}
+    {% if i == 'data' %}
+        {% assign sjcm = site[i] %}
+    {% else %}
+        {% assign sjcm = sjcm[i] %}
     {% endif %}
-{% endfor %}
+{% endfor%}
 
-{% for data-item in site.data[page.sjcm] %}
-    {% if data-item.type == "text" and data-item.group == "intro-text" %}
-        <div class="full-width-c">
-            <div class="header-under-c">
-                <h1>{{data-item.content}}</h1>
-            </div>
-        </div>
-    {% endif %}
-{% endfor %}
-{% for data-item in site.data[page.sjcm] %}
-    {% if data-item.type == "text" and data-item.group == "intro-author" %}
-        <div class="full-width-c">
-            <div class="header-under2-c">
-                <img src="assets/computer-science/pics/test.jpg" alt="" class="writerpic">
-                <h1>{{data-item.content}}</h1>
-            </div>
-        </div>
-    {% endif %}
-{% endfor %}
 
-{% for data-item in site.data[page.sjcm] %}
-    {% if data-item.type == "bdi-text" and data-item.group == "intro-text" %}
-        <div class="full-width-c topGap">
-            <div class="header-c per">
-                <h1>{{data-item.content}}</h1>
-            </div>
-        </div>
-    {% endif %}
-{% endfor %}
-{% for data-item in site.data[page.sjcm] %}
-    {% if data-item.type == "bdi-text" and data-item.group == "intro-author" %}
-        <div class="full-width-c">
-            <div class="header-under-c-per per">
-                <img src="assets/computer-science/pics/test.jpg" alt="" class="writerpic">
-                <h1>{{data-item.content}}</h1>
-            </div>
-        </div>
-    {% endif %}
-{% endfor %}
-
-<div class="full-width-c">
-    <div class="forpadding">
-        {% for data-item in site.data[page.sjcm] %}
-            {% if data-item.type == "text" and data-item.group == "head1" %}
-                <a class='headsListClass' href="#{{data-item.content | strip}}">{{data-item.content | strip}}</a>
-            {% endif %}
-        {% endfor %}
-    </div>
-</div>
-<div class="full-width-c">
-    <div class="forpadding">
-        {% for data-item in site.data[page.sjcm] %}
-            {% if data-item.type == "bdi-text" and data-item.group == "head1" %}
-                <a class='headsListClass headsListClassPer' href="#{{data-item.content | strip}}">{{data-item.content | strip}}</a>
-            {% endif %}
-        {% endfor %}
-    </div>
-</div>
-
-{% for data-item in site.data[page.sjcm] %}
+{% for data-item in sjcm %}
     {% if data-item.type == "noti" and data-item.group == "info" %}
         <div class="full-width-c">
             <div class="page-alert-c info">
@@ -124,13 +64,140 @@
                 <div class="close-icon">&times;</div>
             </div>
         </div>
-    {% elsif data-item.type == "text" and data-item.group == "intro-head" %}
-        <div class="full-width-c topGap">
+    {% endif %}
+{% endfor %}
+
+{% for data-item in sjcm %}
+    {% if data-item.type == "img" and data-item.group == "intro-img" %}
+        <div class="full-width-c backed">
+            <div class="img-c">
+                <img src="{{data-item.content}}" class='img1' alt="">
+            </div>
+        </div>
+    {% endif %}
+{% endfor %}
+
+{% for data-item in sjcm %}
+    {% if data-item.type == "text" and data-item.group == "intro-head" %}
+        <div class="full-width-c fronted">
             <div class="header-c">
+                <h1>{{data-item.content}}</h1>
+            </div>
+        </div>
+    {% endif %}
+{% endfor %}
+{% for data-item in sjcm %}
+    {% if data-item.type == "bdi-text" and data-item.group == "intro-head" %}
+        <div class="full-width-c fronted">
+            <div class="header-c per">
+                <h1>{{data-item.content}}</h1>
+            </div>
+        </div>
+    {% endif %}
+{% endfor %}
+
+{% for data-item in sjcm %}
+    {% if data-item.type == "text" and data-item.group == "intro-under" %}
+        <div class="full-width-c">
+            <div class="header-under-c">
+                <h1>{{data-item.content}}</h1>
+            </div>
+        </div>
+    {% endif %}
+{% endfor %}
+{% for data-item in sjcm %}
+    {% if data-item.type == "bdi-text" and data-item.group == "intro-under" %}
+        <div class="full-width-c">
+            <div class="header-under-c per">
                 <h1>{{ data-item.content }}</h1>
             </div>
         </div>
-    {% elsif data-item.type == "text" and data-item.group == "head1" %}
+    {% endif %}
+{% endfor %}
+
+{% for data-item in sjcm %}
+    {% if data-item.type == "text" and data-item.group == "intro-author" %}
+        {% assign content = data-item.content | split: ',' %}
+        {% for i in content %}
+            {% assign y = i | split: "=" %}
+            {% assign key = y | first | strip %}
+            {% assign value = y | last | strip %}
+
+
+            {% if key == 'alt' %}
+            {% assign alt =  value %}
+            {% elsif key == 'src' %}
+            {% assign src =  value %}
+            {% elsif key == 'name' %}
+            {% assign name =  value %}
+            {% endif %}
+        {% endfor %}
+        <div class="full-width-c">
+            <div class="header-under2-c">
+                <img src="{{ src }}" alt="{{ alt }}" class="writerpic">
+                <h1> {{ name }}</h1>
+            </div>
+        </div>
+    {% endif %}
+{% endfor %}
+{% for data-item in sjcm %}
+    {% if data-item.type == "bdi-text" and data-item.group == "intro-author" %}
+        {% assign content = data-item.content | split: ',' %}
+        {% for i in content %}
+            {% assign y = i | split: "=" %}
+            {% assign key = y | first | strip %}
+            {% assign value = y | last | strip %}
+
+
+            {% if key == 'alt' %}
+            {% assign alt =  value %}
+            {% elsif key == 'src' %}
+            {% assign src =  value %}
+            {% elsif key == 'name' %}
+            {% assign name =  value %}
+            {% endif %}
+        {% endfor %}
+        <div class="full-width-c">
+            <div class="header-under-c-per per">
+                <img src="{{ src }}" alt="{{ alt }}" class="writerpic">
+                <h1>{{ name }}</h1>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+    {% endif %}
+{% endfor %}
+
+<div class="full-width-c">
+    <div class="forpadding">
+        {% for data-item in sjcm %}
+            {% if data-item.type == "text" and data-item.group == "head1" %}
+                <a class='headsListClass' href="#{{data-item.content | strip}}">{{data-item.content | strip}}</a>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+<div class="full-width-c">
+    <div class="forpadding">
+        {% for data-item in sjcm %}
+            {% if data-item.type == "bdi-text" and data-item.group == "head1" %}
+                <a class='headsListClass headsListClassPer' href="#{{data-item.content | strip}}">{{data-item.content | strip}}</a>
+            {% endif %}
+            {% if data-item.type == "bdi-text" and data-item.group == "head2" %}
+                <a class='headsListClass headsListClassPer head2per' href="#{{data-item.content | strip}}">{{data-item.content | strip }}</a>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+
+{% for data-item in sjcm %}
+    {% if data-item.type == "text" and data-item.group == "head1" %}
         <div class="full-width-c topGap" id="{{data-item.content | strip}}">
             <div class="header1-c">
                 <h1>{{ data-item.content }}</h1>
@@ -141,7 +208,7 @@
             console.log(shit.toString());
         </script> -->
     {% elsif data-item.type == "text" and data-item.group == "head2" %}
-        <div class="full-width-c topGap">
+        <div class="full-width-c topGap" id="{{data-item.content | strip}}">
             <div class="header1-c">
                 <h2>{{ data-item.content }}</h2>
             </div>
@@ -159,7 +226,7 @@
             </div>
         </div>
     {% elsif data-item.type == "bdi-text" and data-item.group == "head2" %}
-        <div class="full-width-c topGap">
+        <div class="full-width-c topGap" id="{{data-item.content | strip}}">
             <div class="header1-c per">
                 <h2>{{ data-item.content }}</h2>
             </div>
@@ -172,11 +239,11 @@
         </div>
     {% elsif data-item.type == "text" and data-item.group == "para" %}
         <div class="full-width-c">
-            <p class="normal-paragraph">{{ data-item.content }}</p>
+            <p class="normal-paragraph">{{ data-item.content | newline_to_br}}</p>
         </div>
     {% elsif data-item.type == "bdi-text" and data-item.group == "para" %}
         <div class="full-width-c">
-            <p class="normal-paragraph per">{{ data-item.content }}</p>
+            <p class="normal-paragraph per perLineHeight">{{ data-item.content | newline_to_br }}</p>
         </div>
     {% elsif data-item.type == "text" and data-item.group == "blockquote" %}
         <div class="full-width-c">
@@ -197,17 +264,67 @@
             </div>
         </div>
     {% elsif data-item.type == "img" and data-item.group == "img-style1" %}
+        {% assign content = data-item.content | split: ',' %}
+        {% for i in content %}
+            {% assign y = i | split: "=" %}
+            {% assign key = y | first | strip %}
+            {% assign value = y | last | strip %}
+
+
+            {% if key == 'alt' %}
+                {% assign alt =  value %}
+            {% elsif key == 'src' %}
+                {% assign src =  value %}
+            {% elsif key == 'text' %}
+                {% assign text =  value %}
+            {% endif %}
+        {% endfor %}
         <div class="full-width-c topGap">
             <div class="img-c">
-                <img src="assets/computer-science/pics/test.jpg" class='img2' alt="">
-                <p class="underPic">{{ data-item.content }}</p>
+                <img src="{{ src }}" class='img2' alt="{{ alt }}">
+                <p class="underPic">{{ text }}</p>
             </div>
         </div>
     {% elsif data-item.type == "bdi-img" and data-item.group == "img-style1" %}
+        {% assign content = data-item.content | split: ',' %}
+        {% for i in content %}
+            {% assign y = i | split: "=" %}
+            {% assign key = y | first | strip %}
+            {% assign value = y | last | strip %}
+
+
+            {% if key == 'alt' %}
+                {% assign alt =  value %}
+            {% elsif key == 'src' %}
+                {% assign src =  value %}
+            {% elsif key == 'text' %}
+                {% assign text =  value %}
+            {% endif %}
+        {% endfor %}
         <div class="full-width-c topGap">
             <div class="img-c">
-                <img src="assets/computer-science/pics/test.jpg" class='img2' alt="">
-                <p class="underPicPer">{{ data-item.content }}</p>
+                <img src="{{ src }}" class='img2' alt="{{ alt }}">
+                <p class="underPicPer">{{ text }}</p>
+            </div>
+        </div>
+    {% elsif data-item.type == "img" and data-item.group == "roller" %}
+        <div class="full-width-c">
+            <div class="picRoll-c">
+                {% assign whole = data-item.content | split: '|' %}
+                {% for item in whole %}
+                    {% assign itemDetails = item | split: ',' %}
+                    {% for detail in itemDetails %}
+                        {% assign y = detail | split: "=" %}
+                        {% assign key = y | first | strip %}
+                        {% assign val = y | last | strip %}
+                        {% if key == 'alt' %}
+                            {% assign alt =  val %}
+                        {% elsif key == 'src' %}
+                            {% assign src =  val %}
+                        {% endif %}
+                    {% endfor %}
+                    <img src="{{ src }}" alt="{{ alt }}">
+                {% endfor %}
             </div>
         </div>
     {% elsif data-item.type == "text" and data-item.group == "note" %}
@@ -239,13 +356,31 @@
     {% endif %}
 {% endfor %}
 <script type="text/javascript">
-    $('img').click(function () {
+    $('img').mouseup(function () {
         let location = $(this).attr('src');
         window.open(location, '_blank');
     });
     $('.close-icon').click(function () {
         $(this).parents('.full-width-c').css('display', 'none');
-    })
+    });
+    var scrollVars = {
+        mousedown: false,
+        startX: null
+    };
+    $('.picRoll-c').on("mousedown", function (e) {
+        scrollVars.mousedown = true;
+        scrollVars.startX = e.clientX;
+    });
+    $('.picRoll-c').on("mousemove", function (e) {
+        if (!scrollVars.mousedown) return;
+        let deltaX = scrollVars.startX - e.clientX;
+        $(this).css('cursor', 'grabbing');
+        $(this).get(0).scrollLeft = $(this).get(0).scrollLeft + deltaX/8;
+    });
+    $('.picRoll-c').on("mouseup", function (e) {
+        $(this).css('cursor', 'grab');
+        scrollVars.mousedown = false;
+    });
 </script>
 </body>
 </html>
