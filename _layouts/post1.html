@@ -327,6 +327,26 @@
                 {% endfor %}
             </div>
         </div>
+    {% elsif data-item.type == "text" and data-item.group == "table" %}
+    <!-- {% increment counter1 %} -->
+        <div class="full-width-c">
+                <div class="forpadding">
+                    <table style="width: 100%;">
+                        {% assign whole = data-item.content | split: '|' %}
+                        {% for item in whole %}
+                            <tr>
+                                {% assign itemDetails = item | split: ',' %}
+                                {% for detail in itemDetails %}
+                                    {% assign y = detail | split: "::" %}
+                                    {% assign text = y | first | strip %}
+                                    {% assign colspan = y | last | strip %}
+                                        <td colspan="{{ colspan }}">{{ text }}</td>
+                                {% endfor %}
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+        </div>
     {% elsif data-item.type == "text" and data-item.group == "note" %}
     <!-- {% increment counter1 %} -->
         <div class="full-width-c">

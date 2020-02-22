@@ -97,7 +97,7 @@ $v4: 0px solid transparent;
 @mixin padding5 {
     padding-left: $desktop-padding-hor;
     padding-right: $desktop-padding-hor;
-    padding-top: 0;
+    padding-top: 15px;
     padding-bottom: 2%;
     @media screen and (max-width: $break-small) {
         padding-left: 6%;
@@ -462,4 +462,13 @@ blockquote.perblockquote {
         max-height: 90%;
         padding-top: 4%;
     }
+}
+table, th, td {
+    border: 1px solid darkviolet;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+    text-align: center;
 }
