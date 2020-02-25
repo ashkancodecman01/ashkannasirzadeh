@@ -200,6 +200,11 @@ a {
     @include padding2;
     overflow: hidden;
     #{$b}: $v3;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
 }
 .img-c .img1 {
     max-width: 90%;
