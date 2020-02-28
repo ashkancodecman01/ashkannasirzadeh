@@ -71,7 +71,7 @@ $v4: 0px solid transparent;
     padding-left: 0;
     padding-right: 0;
     padding-top: 0;
-    padding-bottom: $desktop-padding-ver;
+    padding-bottom: 0;
     @media screen and (max-width: $break-small) {
         padding-left: 0;
         padding-right: 0;
@@ -196,7 +196,7 @@ a {
 .perLineHeight {
     line-height: 1.3rem;
 }
-.img-c {
+.img-c2 {
     @include padding2;
     overflow: hidden;
     #{$b}: $v3;
@@ -204,6 +204,15 @@ a {
     background-position: center;
     width: 100vw;
     height: 100vh;
+    box-sizing: border-box;
+}
+.img-c {
+    @include padding2;
+    overflow: hidden;
+    #{$b}: $v3;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
     box-sizing: border-box;
 }
 .img-c .img1 {
@@ -476,4 +485,19 @@ th, td {
     padding: 5px;
     text-align: left;
     text-align: center;
+}
+.reader-c {
+    width: 100vw;
+    height: 30px;
+    background-color: rgba(blue, 0.3);
+    position: absolute;
+    z-index: 10;
+}
+.reader-vertical-alias {
+    width: 1em;
+    height: 100vh;
+    background-color: rgba(red, 0.3);
+    position: fixed;
+    z-index: 10;
+    right: 0;
 }

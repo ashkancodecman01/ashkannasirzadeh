@@ -11,6 +11,8 @@
     <title>{{ page.title }}</title>
 </head>
 <body>
+<div class="reader-c" id="reader-c"></div>
+<div class="reader-vertical-alias" id="reader-vertical-alias"></div>
 {% assign x = page.sjcm | split: '.' %}
 {% for i in x %}
     {% if i == 'data' %}
@@ -70,7 +72,7 @@
 {% for data-item in sjcm %}
     {% if data-item.type == "img" and data-item.group == "intro-img" %}
         <div class="full-width-c backed">
-            <div class="img-c" style="background-image: url({{ data-item.content }});">
+            <div class="img-c2" style="background-image: url({{ data-item.content }});">
             </div>
         </div>
     {% endif %}
@@ -80,7 +82,7 @@
     {% if data-item.type == "text" and data-item.group == "intro-head" %}
         <div class="full-width-c fronted">
             <div class="header-c">
-                <h1>{{data-item.content}}</h1>
+                <h1 style="background-color: rgba(10, 10, 10, 0.5);padding: 5px;border-radius: 10px">{{data-item.content}}</h1>
             </div>
         </div>
     {% endif %}
@@ -89,7 +91,7 @@
     {% if data-item.type == "bdi-text" and data-item.group == "intro-head" %}
         <div class="full-width-c fronted">
             <div class="header-c per">
-                <h1>{{data-item.content}}</h1>
+                <h1 style="background-color: rgba(10, 10, 10, 0.5);padding: 5px;border-radius: 10px">{{data-item.content}}</h1 style="background-color: red;">
             </div>
         </div>
     {% endif %}
@@ -374,6 +376,8 @@
     {% endif %}
 {% endfor %}
 <script type="text/javascript">
+    var pos1,
+        dragable = false;
     $('img').mouseup(function () {
         let location = $(this).attr('src');
         window.open(location, '_blank');
@@ -398,6 +402,20 @@
     $('.picRoll-c').on("mouseup", function (e) {
         $(this).css('cursor', 'grab');
         scrollVars.mousedown = false;
+    });
+    $('#reader-c').on('mousedown', function (e) {
+        dragable = true;
+    });
+    $('#reader-c').on('mousemove', function (e) {
+        if (dragable) {
+            $(this).css('top', e.pageY - 12);
+        }
+    });
+    $('body').on('mouseup', function (e) {
+        dragable = false;
+    });
+    $('#reader-vertical-alias').on('click', function (e) {
+        $('#reader-c').css('top', e.pageY - 12);
     });
 </script>
 </body>
