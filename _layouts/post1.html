@@ -311,6 +311,7 @@
     {% elsif data-item.type == "img" and data-item.group == "roller" %}
         <div class="full-width-c">
             <div class="picRoll-c">
+                <script>console.log('ali')</script>
                 {% assign whole = data-item.content | split: '|' %}
                 {% for item in whole %}
                     {% assign itemDetails = item | split: ',' %}
@@ -320,7 +321,7 @@
                         {% assign val = y | last | strip %}
                         {% if key == 'alt' %}
                             {% assign alt =  val %}
-                        {% elsif key == 'src' %}
+                        {% elsif key == '<br>src' or key == 'src' %}
                             {% assign src =  val %}
                         {% endif %}
                     {% endfor %}

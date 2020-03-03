@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    color: whitesmoke;
+    background-color: midnightblue;
+}
+.hide-c {
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: midnightblue;
+}
+.per {
+    direction: rtl;
+}
+.p1 {
+    padding: 10px;
+}
+.b {
+    border: 1px solid red;
+}
+.bold {
+    font-weight: 900;
+}
+.head1::before {
+    content: "◀️ ";
+}
+.img1 {
+    max-width: 100px;
+    max-height: 100px;
+    position: relative;
+    float: right;
+}
