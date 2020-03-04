@@ -14,7 +14,7 @@ body {
     width: 100vw;
     height: 100vh;
     box-sizing: border-box;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     background-color: midnightblue;
@@ -39,4 +39,12 @@ body {
     max-height: 100px;
     position: relative;
     float: right;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.fullBlock {
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+    padding-top: 0;
 }
