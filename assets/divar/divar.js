@@ -9,6 +9,7 @@ jQuery(document).ready(function ($) {
         let pass = $('#passBox').val();
         if (pass == 'ashi') {
             $('.hide-c').css('display', 'none');
+            $('.content').css('display', 'block');
         } else {
             $('#passBox').val('');
         }

@@ -19,6 +19,9 @@ body {
     align-items: center;
     background-color: midnightblue;
 }
+.content {
+    display: none;
+}
 .per {
     direction: rtl;
 }
