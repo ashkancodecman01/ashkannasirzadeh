@@ -32,10 +32,15 @@ $breakHeight: 825px;
 	margin-right:auto;
 	margin-top:100px;
   font-size:14px;
+  border: 1px solid red;
+  width: 90%;
   @media screen and (max-width: $breakWidgh) {
+    margin-top:50px;
     font-size: 1rem !important;
   }
   @media screen and (max-height: $breakHeight) {
+    margin-top:50px;
+    font-size: 1rem !important;
   }
 }
 .rasmi-pic {
@@ -46,10 +51,13 @@ $breakHeight: 825px;
     background-repeat: no-repeat;
     position: fixed;
     margin: auto;
-    left: 20%;
+    left: 0;
+    right: 0;
     top: 0;
     bottom: 0;
     z-index: 10;
+    border: 1px solid red;
+    border-radius: 100%;
 }
 
 .mail {
@@ -67,12 +75,19 @@ $breakHeight: 825px;
     left: 0;
     right: 0;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     z-index: 9;
     color: white;
     animation: dash3 2s linear alternate;
     animation-fill-mode: forwards;
+    border: 1px solid red;
+    @media screen and (max-width: $breakWidgh) {
+      bottom: 15%;
+    }
+    @media screen and (max-height: $breakHeight) {
+      bottom: 15%;
+    }
 }
 .drawing-c {
     position: fixed;
