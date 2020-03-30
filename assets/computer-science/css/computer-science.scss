@@ -149,6 +149,9 @@ a {
     box-sizing: border-box;
     padding: 7px;
 }
+.headsListClass:hover {
+    color: deepskyblue;
+}
 .forpadding a.headsListClassPer {
     @include per;
     border-left: 3px solid transparent;

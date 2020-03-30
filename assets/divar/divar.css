@@ -22,6 +22,14 @@ body {
 .content {
     display: none;
 }
+/* developerMode */
+/* .hide-c {
+    display: none;
+}
+.content {
+    display: block;
+} */
+/* end */
 .per {
     direction: rtl;
 }
