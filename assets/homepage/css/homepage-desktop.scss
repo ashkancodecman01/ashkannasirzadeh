@@ -32,7 +32,7 @@ $breakHeight: 825px;
 	margin-right:auto;
 	margin-top:100px;
   font-size:14px;
-  border: 1px solid red;
+  border: 1px dashed black;
   width: 90%;
   @media screen and (max-width: $breakWidgh) {
     margin-top:50px;
@@ -56,8 +56,8 @@ $breakHeight: 825px;
     top: 0;
     bottom: 0;
     z-index: 10;
-    border: 1px solid red;
     border-radius: 100%;
+    box-shadow: 0px 0px 5px black;
 }
 
 .mail {
@@ -81,7 +81,6 @@ $breakHeight: 825px;
     color: white;
     animation: dash3 2s linear alternate;
     animation-fill-mode: forwards;
-    border: 1px solid red;
     @media screen and (max-width: $breakWidgh) {
       bottom: 15%;
     }
@@ -130,15 +129,25 @@ path {
     animation-delay: 1s;
     animation-fill-mode: forwards;
 }
-.site-link1 {
-    position: fixed;
-    left: 20%;
-    bottom: 10px;
+.link-container {
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .site-link2 {
-    position: fixed;
-    right: 20%;
-    bottom: 10px;
+  padding: 3px;
+  background-color: dodgerblue;
+  color: white;
+  border-radius: 7px;
+  box-shadow: 0px 0px 3px black;
+}
+.site-link2 a {
+  color: white;
+  text-decoration: none;
 }
 @keyframes dash {
   0% {
