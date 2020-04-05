@@ -5,6 +5,9 @@ $basicArray = [
     {"phrase": "URI", "abbr": "URI", "standFor": "Uniform Resource Identifire"},
     {"phrase": "URL", "abbr": "URL", "standFor": "Uniform Resource Locator"},
     {"phrase": "URN", "abbr": "URN", "standFor": "Uniform Resource Name"},
+    {"phrase": "JRE", "abbr": "JRE", "standFor": "Java Runtime Environment"},
+    {"phrase": "JDK", "abbr": "JDK", "standFor": "Java Development kit"},
+    {"phrase": "jar", "abbr": "jar", "standFor": "java archive"},
     {"phrase": "http server:generally a web server like Apache Web Server or IIS", "abbr": "IIS", "standFor": "Internet Information Services"},
 ]
 jQuery(document).ready(function ($) {

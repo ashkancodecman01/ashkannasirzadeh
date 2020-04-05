@@ -1,0 +1,158 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: dodgerblue;
+}
+@font-face {
+    font-family: iranianSans;
+    src: url('../../assets/fonts/AIranianSans.ttf');
+}
+@font-face {
+    font-family: arbutus;
+    src: url('../../assets/fonts/ArbutusSlab-Regular.ttf');
+}
+.per {
+    font-family: iranianSans;
+}
+.eng {
+    font-family: arbutus;
+}
+.face-c-fullWidth {
+    position: relative;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: face-c-bgco;
+    animation-duration: 2s;
+    background-color: dodgerblue;
+}
+.header-c-fullWidth {
+    position: relative;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation-name: face-c-bgco;
+    animation-duration: 2s;
+    background-color: dodgerblue;
+}
+.card-c-fullWidth {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-duration: 2s;
+    background-color: dodgerblue;
+    padding: 10px;
+}
+.links-c-fullWidth {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: dodgerblue;
+}
+.linksimg {
+    width: 100px;
+}
+.links-c-1 {
+    width: 50px;
+    height: 50px;
+    background-image: url('../computer-science/pics/git.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.links-c-2 {
+    width: 200px;
+    height: 100px;
+    background-image: url('../computer-science/pics/stackoverflow.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+.footer-c-fullWidth {
+    position: relative;
+    height: 100px;
+    background-color: dodgerblue;
+}
+.header-c-fullWidth h1, .header-c-fullWidth h3 {
+    color: white
+}
+.face-c {
+    width: 125px;
+    height: 125px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    animation-name: face-c-animation;
+    animation-duration: 2s;
+    box-shadow: 0 0 6px white;
+}
+.face-circle {
+    width: 125px;
+    height: 125px;
+    border-radius: 100%;
+    background-image: url('../homepage/media/rasmi.jpg');
+    background-size: contain;
+}
+.card {
+    width: 300px;
+    box-shadow: 0 0 6px white;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+}
+.card-header {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0;
+}
+.card-item-right {
+    width: 100%;
+    position: relative;
+    margin: 5px 0;
+    direction: rtl;
+    border-right: 1px solid white;
+    padding-right: 5px;
+}
+.card-item-left {
+    width: 100%;
+    position: relative;
+    margin: 5px 0;
+    border-left: 1px solid white;
+    padding-left: 5px;
+}
+@keyframes face-c-animation{
+    0% {
+        width: 100%;
+        border-radius: 0;
+        box-shadow: 0 0 0 black;
+    }
+    90% {
+        border-radius: 0;
+    }
+    100% {
+        width: 125px;
+        border-radius: 100%;
+        box-shadow: 0 0 6px white;
+    }
+}
+@keyframes face-c-bgco{
+    0% {
+        background-color: #fff;
+    }
+    100% {
+        background-color: dodgerblue;
+    }
+}
