@@ -5,7 +5,13 @@ searchBox.addEventListener('keyup', () => {
     let valToSearch = searchBox.value;
     let results = search(valToSearch);
     results.forEach((v,i) => {
-        $('#result-c').append(`<div class="result result-top">${v.path}</div><div class="result result-bottom">${v.content}</div>`);
+        let link = 'https://' + v.path;
+        $('#result-c').append(`
+            <div class="result">
+                <div class="result-top"><a href="${link}">${v.path}</a></div>
+                <div class="result-bottom">${v.content}</div>
+            </div>
+        `);
     });
 })
 function search (valToSearch) {
@@ -16,4 +22,7 @@ function search (valToSearch) {
         if (a) results.push(v);
     });
     return results;
+}
+window.onload = function () {
+    searchBox.focus();
 }
