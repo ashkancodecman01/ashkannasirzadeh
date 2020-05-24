@@ -9,6 +9,7 @@ $basicArray = [
     {"phrase": "JDK", "abbr": "JDK", "standFor": "Java Development kit"},
     {"phrase": "jar", "abbr": "jar", "standFor": "java archive"},
     {"phrase": "http server:generally a web server like Apache Web Server or IIS", "abbr": "IIS", "standFor": "Internet Information Services"},
+    {"phrase": "", "abbr": "CDN", "standFor": "Content Delivery Network"},
 ]
 jQuery(document).ready(function ($) {
     $basicArray.forEach(function (v, i) {
