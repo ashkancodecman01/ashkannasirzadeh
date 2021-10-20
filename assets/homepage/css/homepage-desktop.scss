@@ -99,10 +99,10 @@ $breakHeight2: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
-    @media screen and (max-width: $breakWidgh2) {
+    @media screen and (max-width: $breakWidgh) {
       display: none;
     }
-    @media screen and (max-height: $breakHeight2) {
+    @media screen and (max-height: $breakHeight) {
       display: none;
     }
 }
