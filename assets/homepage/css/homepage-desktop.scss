@@ -1,7 +1,9 @@
 ---
 ---
 $breakWidgh: 900px;
-$breakHeight: 400px;
+$breakHeight: 700px;
+$breakWidgh2: 900px;
+$breakHeight2: 400px;
 :root {
     --console-bg-color: white;
     --console-width: 60%;
@@ -97,10 +99,10 @@ $breakHeight: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
-    @media screen and (max-width: $breakWidgh) {
+    @media screen and (max-width: $breakWidgh2) {
       display: none;
     }
-    @media screen and (max-height: $breakHeight) {
+    @media screen and (max-height: $breakHeight2) {
       display: none;
     }
 }
