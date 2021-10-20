@@ -44,8 +44,8 @@ $breakHeight: 700px;
   }
 }
 .rasmi-pic {
-    width: 220px;
-    height: 220px;
+    width: 120px;
+    height: 120px;
     background-image: url('../media/rasmi.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -53,7 +53,7 @@ $breakHeight: 700px;
     margin: auto;
     left: 0;
     right: 0;
-    top: -100;
+    top: 0;
     bottom: 0;
     z-index: 10;
     border-radius: 100%;
@@ -71,7 +71,7 @@ $breakHeight: 700px;
     height: 25px;
     margin: auto;
     left: 40%;
-    bottom: 35%;
+    bottom: 25%;
     left: 0;
     right: 0;
     display: flex;
@@ -144,7 +144,6 @@ path {
   color: white;
   border-radius: 7px;
   box-shadow: 0px 0px 3px black;
-  display: none;
 }
 .site-link2 a {
   color: white;
