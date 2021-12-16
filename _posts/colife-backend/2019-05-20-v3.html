@@ -62,92 +62,100 @@ permalink: /colife-backend/v3
 </ol>
 <hr>
 <h3 class="code-line" data-line-start=62 data-line-end=63><a id="createPerson_62"></a>createPerson</h3>
-<pre><code class="has-line-data" data-line-start="64" data-line-end="71">POST [HOST]/person3/createPerson HTTP/1.1
+<pre><code class="has-line-data" data-line-start="64" data-line-end="76">POST [HOST]/person3/createPerson HTTP/1.1
 content-type: application/json
 
 {
-    &quot;XXXX&quot;: &quot;XXXXX&quot;
+    &quot;name&quot;: &quot;kia&quot; // string
+    &quot;family&quot;: &quot;nsx&quot; // string
+    &quot;idCardNum&quot;: &quot;00100233669&quot; // number
+    &quot;gender&quot;: &quot;male&quot; // Enum: male, female, by
+    &quot;employmentStartDate&quot;: &quot;89498184877&quot; // number timestamp
+    &quot;birthDate&quot;: &quot;9861684896148&quot; // number timestamp
 }
 </code></pre>
-<p class="has-line-data" data-line-start="71" data-line-end="72"><img src="https://raw.githubusercontent.com/kia-nasirzadeh/ashkan-nasirzadeh.ir/gh-pages/_posts/colife-backend/createPerson.png" alt=""></p>
+<p class="has-line-data" data-line-start="76" data-line-end="77"><img src="https://raw.githubusercontent.com/kia-nasirzadeh/ashkan-nasirzadeh.ir/gh-pages/_posts/colife-backend/createPerson.png" alt=""></p>
 <hr>
-<h3 class="code-line" data-line-start=74 data-line-end=75><a id="readPerson_74"></a>readPerson</h3>
-<pre><code class="has-line-data" data-line-start="76" data-line-end="83">GET [HOST]/person3/createPerson HTTP/1.1
-content-type: application/json
-
-{
-    &quot;XXXX&quot;: &quot;XXXXX&quot;
-}
+<h3 class="code-line" data-line-start=79 data-line-end=80><a id="readPerson_79"></a>readPerson</h3>
+<pre><code class="has-line-data" data-line-start="81" data-line-end="83">GET [HOST]/person/_id/61b22537024997b2d7bcda9d
 </code></pre>
 <p class="has-line-data" data-line-start="83" data-line-end="85"><img src="https://raw.githubusercontent.com/kia-nasirzadeh/ashkan-nasirzadeh.ir/gh-pages/_posts/colife-backend/readPerson.png" alt=""><br>
-e.g. to get a person with entityName=doctor:&lt;br&gt;</p>
-<p class="has-line-data" data-line-start="86" data-line-end="87"><code>GET - [HOST]/person/entityName/ali</code></p>
+e.g. to get a person with entityName=doctor:</p>
 <hr>
-<h3 class="code-line" data-line-start=89 data-line-end=90><a id="listPersons_89"></a>listPersons</h3>
-<pre><code class="has-line-data" data-line-start="91" data-line-end="98">POST [HOST]/person3/createPerson HTTP/1.1
+<h3 class="code-line" data-line-start=87 data-line-end=88><a id="listPersons_87"></a>listPersons</h3>
+<pre><code class="has-line-data" data-line-start="89" data-line-end="96">POST [HOST]/person3/createPerson HTTP/1.1
 content-type: application/json
 
 {
     &quot;XXXX&quot;: &quot;XXXXX&quot;
 }
 </code></pre>
-<p class="has-line-data" data-line-start="98" data-line-end="100"><img src="https://raw.githubusercontent.com/kia-nasirzadeh/ashkan-nasirzadeh.ir/gh-pages/_posts/colife-backend/listPersons%26MainPage.png" alt=""><br>
+<p class="has-line-data" data-line-start="96" data-line-end="105">using without “page” key (to get lists):<br>
+limit can be one of the following:<br>
+1- a number, for example 2 to get 2 record<br>
+2- all<br>
+3- count<br>
+4- all&amp;count<br>
+using with “page” key (for pagination):<br>
+to get 10 results set limit:10<br>
+to get page 3 set page:3</p>
+<p class="has-line-data" data-line-start="106" data-line-end="108"><img src="https://raw.githubusercontent.com/kia-nasirzadeh/ashkan-nasirzadeh.ir/gh-pages/_posts/colife-backend/listPersons%26MainPage.png" alt=""><br>
 <img src="https://raw.githubusercontent.com/kia-nasirzadeh/ashkan-nasirzadeh.ir/gh-pages/_posts/colife-backend/listPersons.png" alt=""></p>
-<p class="has-line-data" data-line-start="101" data-line-end="102">**getting a list **</p>
+<p class="has-line-data" data-line-start="109" data-line-end="110">**getting a list **</p>
 <hr>
-<h3 class="code-line" data-line-start=104 data-line-end=105><a id="updatePerson_104"></a>updatePerson</h3>
-<pre><code class="has-line-data" data-line-start="106" data-line-end="113">PATCH [HOST]/person3/createPerson HTTP/1.1
+<h3 class="code-line" data-line-start=112 data-line-end=113><a id="updatePerson_112"></a>updatePerson</h3>
+<pre><code class="has-line-data" data-line-start="114" data-line-end="121">PATCH [HOST]/person3/createPerson HTTP/1.1
 content-type: application/json
 
 {
     &quot;XXXX&quot;: &quot;XXXXX&quot;
 }
 </code></pre>
-<p class="has-line-data" data-line-start="113" data-line-end="114"><img src="https://raw.githubusercontent.com/kia-nasirzadeh/ashkan-nasirzadeh.ir/gh-pages/_posts/colife-backend/updatePerson.png" alt=""></p>
+<p class="has-line-data" data-line-start="121" data-line-end="122"><img src="https://raw.githubusercontent.com/kia-nasirzadeh/ashkan-nasirzadeh.ir/gh-pages/_posts/colife-backend/updatePerson.png" alt=""></p>
 <hr>
-<h3 class="code-line" data-line-start=116 data-line-end=117><a id="delPerson_116"></a>delPerson</h3>
-<pre><code class="has-line-data" data-line-start="118" data-line-end="125">DELETE [HOST]/person3/createPerson HTTP/1.1
+<h3 class="code-line" data-line-start=124 data-line-end=125><a id="delPerson_124"></a>delPerson</h3>
+<pre><code class="has-line-data" data-line-start="126" data-line-end="133">DELETE [HOST]/person3/createPerson HTTP/1.1
 content-type: application/json
 
 {
     &quot;XXXX&quot;: &quot;XXXXX&quot;
 }
 </code></pre>
-<p class="has-line-data" data-line-start="125" data-line-end="126"><img src="https://raw.githubusercontent.com/kia-nasirzadeh/ashkan-nasirzadeh.ir/gh-pages/_posts/colife-backend/listPersons%26MainPage.png" alt=""></p>
+<p class="has-line-data" data-line-start="133" data-line-end="134"><img src="https://raw.githubusercontent.com/kia-nasirzadeh/ashkan-nasirzadeh.ir/gh-pages/_posts/colife-backend/listPersons%26MainPage.png" alt=""></p>
 <hr>
-<h3 class="code-line" data-line-start=128 data-line-end=129><a id="personExists_128"></a>personExists</h3>
-<pre><code class="has-line-data" data-line-start="130" data-line-end="137">GET [HOST]/person3/createPerson HTTP/1.1
+<h3 class="code-line" data-line-start=136 data-line-end=137><a id="personExists_136"></a>personExists</h3>
+<pre><code class="has-line-data" data-line-start="138" data-line-end="145">GET [HOST]/person3/createPerson HTTP/1.1
 content-type: application/json
 
 {
     &quot;XXXX&quot;: &quot;XXXXX&quot;
 }
 </code></pre>
-<p class="has-line-data" data-line-start="137" data-line-end="139">this is just a helper api, we will remove this in production<br>
+<p class="has-line-data" data-line-start="145" data-line-end="147">this is just a helper api, we will remove this in production<br>
 since we are also using this api service in backend, if there is no data it won’t return a json, just null(no data)</p>
-<p class="has-line-data" data-line-start="140" data-line-end="141">another possible option is :</p>
-<p class="has-line-data" data-line-start="142" data-line-end="143">{ “status”: 2, “message”: “not valid key” }</p>
+<p class="has-line-data" data-line-start="148" data-line-end="149">another possible option is :</p>
+<p class="has-line-data" data-line-start="150" data-line-end="151">{ “status”: 2, “message”: “not valid key” }</p>
 <hr>
-<h3 class="code-line" data-line-start=145 data-line-end=146><a id="searchWithConds_145"></a>searchWithConds</h3>
-<pre><code class="has-line-data" data-line-start="147" data-line-end="154">POST [HOST]/person3/createPerson HTTP/1.1
+<h3 class="code-line" data-line-start=153 data-line-end=154><a id="searchWithConds_153"></a>searchWithConds</h3>
+<pre><code class="has-line-data" data-line-start="155" data-line-end="162">POST [HOST]/person3/createPerson HTTP/1.1
 content-type: application/json
 
 {
     &quot;XXXX&quot;: &quot;XXXXX&quot;
 }
 </code></pre>
-<p class="has-line-data" data-line-start="154" data-line-end="155"><img src="https://raw.githubusercontent.com/kia-nasirzadeh/ashkan-nasirzadeh.ir/gh-pages/_posts/colife-backend/searchWithConds.png" alt=""></p>
+<p class="has-line-data" data-line-start="162" data-line-end="163"><img src="https://raw.githubusercontent.com/kia-nasirzadeh/ashkan-nasirzadeh.ir/gh-pages/_posts/colife-backend/searchWithConds.png" alt=""></p>
 <hr>
-<h3 class="code-line" data-line-start=157 data-line-end=158><a id="search_157"></a>search</h3>
-<pre><code class="has-line-data" data-line-start="159" data-line-end="166">POST [HOST]/person3/createPerson HTTP/1.1
+<h3 class="code-line" data-line-start=165 data-line-end=166><a id="search_165"></a>search</h3>
+<pre><code class="has-line-data" data-line-start="167" data-line-end="174">POST [HOST]/person3/createPerson HTTP/1.1
 content-type: application/json
 
 {
     &quot;XXXX&quot;: &quot;XXXXX&quot;
 }
 </code></pre>
-<p class="has-line-data" data-line-start="166" data-line-end="167"><img src="https://raw.githubusercontent.com/kia-nasirzadeh/ashkan-nasirzadeh.ir/gh-pages/_posts/colife-backend/search.png" alt=""></p>
+<p class="has-line-data" data-line-start="174" data-line-end="175"><img src="https://raw.githubusercontent.com/kia-nasirzadeh/ashkan-nasirzadeh.ir/gh-pages/_posts/colife-backend/search.png" alt=""></p>
 <hr>
-<h2 class="code-line" data-line-start=169 data-line-end=170><a id="modules_relations_169"></a>modules relations:</h2>
-<p class="has-line-data" data-line-start="170" data-line-end="171"><img src="https://i.imgur.com/mD7aFRO.png" alt=""></p>
+<h2 class="code-line" data-line-start=177 data-line-end=178><a id="modules_relations_177"></a>modules relations:</h2>
+<p class="has-line-data" data-line-start="178" data-line-end="179"><img src="https://i.imgur.com/mD7aFRO.png" alt=""></p>
 </body></html>
