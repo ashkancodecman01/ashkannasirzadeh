@@ -52,7 +52,8 @@ body { background-color: black; color: whitesmoke; } h1 { font-size: 2rem; } h2 
 <li><a href="#whatwho-is-a-person">what/who is a Person?</a></li>
 </ul>
 </li>
-<li><a href="#manual">manual</a>
+<li><a href="#rules--conventions">rules &amp; conventions</a></li>
+<li><a href="#-manuals">## manuals</a>
 <ul>
 <li><a href="#createperson">createPerson</a></li>
 <li><a href="#readperson">readPerson</a></li>
@@ -67,6 +68,12 @@ body { background-color: black; color: whitesmoke; } h1 { font-size: 2rem; } h2 
 <li><a href="#personexists">personExists</a></li>
 <li><a href="#searchwithconds">searchWithConds</a></li>
 <li><a href="#search">search</a></li>
+<li><a href="#create-an-expertise">create an expertise</a></li>
+<li><a href="#get-all-expertises">get all expertises</a></li>
+<li><a href="#get-an-expertise-by-id">get an expertise by id</a></li>
+<li><a href="#update-an-expertise">update an expertise</a></li>
+<li><a href="#delete-an-expertise">delete an expertise</a></li>
+<li><a href="#godsearch">godSearch</a></li>
 </ul>
 </li>
 <li><a href="#modules-relations">modules relations</a></li>
@@ -84,26 +91,41 @@ body { background-color: black; color: whitesmoke; } h1 { font-size: 2rem; } h2 
 <li>more strict on let/const/var and hardware-performance</li>
 <li>now we won't return passwords!!!</li>
 <li>accomplished a compelete loging system using interceptors</li>
-<li>handle exceptions to nest official standard way, using notFoundException, badRequestException and ...</li>
+<li>handle exceptions to nest official &amp; HTTP standard way, using notFoundException, badRequestException and ...</li>
 <li>added whoAmI in auth module</li>
 <li>checked if any findOne doesn't get null</li>
 <li>add currentUser Decorator;</li>
 <li>code beautified</li>
 <li>standardize api http verbs</li>
 <li>more restrict on classes modifiers</li>
-<li>all automatic answers from dto or database or exceptions (like notFoundException or badRequestException) have status too</li>
 <li><code>entityType</code> is Enum now</li>
 <li><code>gender</code> is Enum now</li>
 <li><code>job</code> is Enum now</li>
-<li>createPerson now just takes following properties: name, family, idCardNum, gender, employmentStartDate, birthDate</li>
+<li>createPerson now just takes following properties:
+<ol>
+<li>entityName</li>
+<li>name</li>
+<li>family</li>
+<li>idCardNum</li>
+<li>gender</li>
+<li>employmentStartDate</li>
+<li>birthDate</li>
+</ol>
+</li>
+<li>createPerson now also returns _id of recently created Person</li>
+<li>readPerson now just can be used with _id</li>
+<li>updatePerson jsut update persons with their IDs</li>
 <li>updatePerson now just takes following properties: tel1,tel2, mail, fatherName, motherName, countryOfBirth, cityOfBirth, citizenshipNumber, job</li>
 <li>delPerson API only works with _id now</li>
-<li>searchWithConds API only takes following properties: employmentStartDate, employmentEndDate, birthDate, gender, cityOfBirth, countryOfBirth, wherekey, whereval</li>
+<li>search keys just accepts name and family</li>
+<li>searchWithConds API only takes following properties: employmentStartDate, employmentEndDate, birthDate, gender, cityOfBirth, name, family, idCardNum, countryOfBirth, wherekey, whereval</li>
 <li><span class="highlight">to indicate that employmentEndDate is <em>now</em>, set it to 0</span></li>
 <li>added mainPosition &amp; subPostion</li>
 <li>list API now works comletely different</li>
 <li>we wont use unit tests so i deleted all spec files outside main integration test directory</li>
 <li>E2E integration tests can not find absolute path, i changed some absolute import addresses to relative</li>
+<li>deleted graphql things</li>
+<li>we no more use <code>@Res</code> (express library specific) in nest!</li>
 </ol>
 <h3 id="whatwho-is-a-person">what/who is a Person?</h3>
 <p>a person is someone like a doctor or a pathologist or ...</p>
@@ -170,15 +192,12 @@ body { background-color: black; color: whitesmoke; } h1 { font-size: 2rem; } h2 
 <li><code>unknown</code></li>
 </ol>
 </li>
-<li><code>job</code>
+</ol>
+<h2 id="rules--conventions">rules &amp; conventions</h2>
 <ol>
-<li><code>unknown</code></li>
-<li><code>clinicalPhysician</code></li>
-<li><code>receptionist</code></li>
+<li>if any API returns a body with <code>status</code> key equals to <code>1</code>, it can be considered as a successful operation for the main purpose of that API</li>
 </ol>
-</li>
-</ol>
-<h2 id="manual">manual</h2>
+<h2 id="manuals">manuals</h2>
 <hr>
 <h3 id="createperson">createPerson</h3>
 <pre><code><code><div>POST [HOST]/person3/createPerson HTTP/1.1
@@ -200,7 +219,7 @@ content-type: application/json
 <pre><code><code><div>GET [HOST]/person3/_id/61b22537024997b2d7bcda9d
 </div></code></code></pre>
 <p><img src="https://raw.githubusercontent.com/kia-nasirzadeh/ashkan-nasirzadeh.ir/gh-pages/_posts/colife-backend/readPerson.png" alt="">
-e.g. to get a person with entityName=doctor:</p>
+e.g. to get a person with _id=61b22537024997b2d7bcda9d:</p>
 <hr>
 <h3 id="listpersons">listPersons</h3>
 <p>you can use this api for different purposes:</p>
@@ -237,7 +256,7 @@ content-type: application/json
     &quot;limit&quot;: 10,
     &quot;page&quot;: 1, // number
     &quot;entityName&quot;: &quot;doctors&quot;, // entityName Enum
-    &quot;groupingKey&quot;: &quot;job&quot;, // Enum
+    &quot;groupingKey&quot;: &quot;job&quot;,
     &quot;groupingVal&quot;: &quot;programmers&quot; // string
 }
 // it will return a list of contacts with following keys:
@@ -253,12 +272,15 @@ content-type: application/json
 </div></code></code></pre>
 <p>above example displays how you can get 10 rows of “contacts”  for page one, it'll show just programmers
 <code>groupingVal</code> will be an Enum in next versions but now we have not enough sources</p>
+<p><strong>note:</strong> if you don't set <code>page</code> it'll get 1 automatically</p>
 <hr>
 <h3 id="updateperson">updatePerson</h3>
+<p>in this API you can update a person with his _id</p>
 <pre><code><code><div>PATCH [HOST]/person3/updatePerson HTTP/1.1
 content-type: application/json
 
 {
+    &quot;_id&quot; &quot;lksjropur9328n98&quot;
     &quot;tel1&quot;: 32483947, // number
     &quot;tel2&quot;: 2343209483, // number
     &quot;mail&quot;: &quot;a@b.c&quot;, // vali email string
@@ -267,21 +289,17 @@ content-type: application/json
     &quot;countryOfBirth&quot;: &quot;iran&quot;,
     &quot;cityOfBirth&quot;: &quot;tehran&quot;,
     &quot;citizenshipNumber&quot;: 1234324, // number
-    &quot;job&quot;: &quot;programmer&quot; // Enum
-    
+    &quot;job&quot;: &quot;programmer&quot;
 }
 </div></code></code></pre>
 <p><img src="https://raw.githubusercontent.com/kia-nasirzadeh/ashkan-nasirzadeh.ir/gh-pages/_posts/colife-backend/updatePerson.png" alt=""></p>
 <hr>
 <h3 id="delperson">delPerson</h3>
-<pre><code><code><div>DELETE [HOST]/person3/delPerson HTTP/1.1
+<pre><code><code><div>DELETE [HOST]/person3/delPerson/61c822c57ac8f731f2a29b7c HTTP/1.1
 content-type: application/json
-
-{
-    &quot;_id&quot;: &quot;879rjsdof7uweojf&quot; // string
-}
 </div></code></code></pre>
-<p><img src="https://raw.githubusercontent.com/kia-nasirzadeh/ashkan-nasirzadeh.ir/gh-pages/_posts/colife-backend/listPersons%26MainPage.png" alt=""></p>
+<p>this will return the recent object you deleted with status one Or an empty object with just status 0 if your request id don't match any document in DB or a completely empty object if you didn't provide any &quot;_id&quot; key for it
+<img src="https://raw.githubusercontent.com/kia-nasirzadeh/ashkan-nasirzadeh.ir/gh-pages/_posts/colife-backend/listPersons%26MainPage.png" alt=""></p>
 <hr>
 <h3 id="personexists">personExists</h3>
 <pre><code><code><div>GET [HOST]/person3/createPerson HTTP/1.1
@@ -304,105 +322,15 @@ in the above example we want to check if a person with _id equal to &quot;61b225
 <code>orKeys</code>: a two dimensional array of conditions whose can be met with others or not
 every singleton of these conditions is nothing but a member of a two-dimensional array which is the original filtering array, let's see one of these conditions:</p>
 <pre><code><code><div>{
-    wherekey: &quot;entityName&quot;,
-    whereval: &quot;doctors&quot;
-    andKeys[0][0]: &quot;birthDate&quot;,
-    andKeys[0][1]: 34124235,
-    andKeys[0][2]: &quot;&gt;&quot;
+    &quot;limit&quot;: 10,
+    &quot;page&quot;: 1,
+    &quot;andKeys&quot;: [
+        [&quot;cityOfBirth&quot;, &quot;california&quot;, &quot;=&quot;],
+        [&quot;countryOfBirth&quot;, &quot;usa&quot;, &quot;=&quot;]
+    ],
+    &quot;entityName&quot;: &quot;doctors&quot;
 }
 </div></code></code></pre>
-<p>means:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">andKeys</th>
-<th style="text-align:center">cond1</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">this</td>
-<td style="text-align:center">birthDate</td>
-</tr>
-<tr>
-<td style="text-align:center">must be</td>
-<td style="text-align:center">greater than</td>
-</tr>
-<tr>
-<td style="text-align:center">to this</td>
-<td style="text-align:center">34124235</td>
-</tr>
-</tbody>
-</table>
-<p>now we can combine as much conditions as we want with eachother, lets see another example:</p>
-<pre><code><code><div>POST [HOST]/person3/searchWithConds HTTP/1.1
-content-type: application/json
-
-{
-    wherekey: &quot;entityName&quot;,
-    whereval: &quot;doctors&quot;
-    andKeys[0][0]: &quot;birthDate&quot;,
-    andKeys[0][1]: 34124235,
-    andKeys[0][2]: &quot;&gt;&quot;,
-    andKeys[0][0]: &quot;gender&quot;,
-    andKeys[0][1]: &quot;male&quot;,
-    andKeys[0][2]: &quot;=&quot;,
-    orKeys[0][0]: &quot;name&quot;,
-    orKeys[0][1]: &quot;ali&quot;,
-    orKeys[0][2]: &quot;=&quot;
-}
-</div></code></code></pre>
-<p>means:</p>
-<table>
-<thead>
-<tr>
-<th>andKeys</th>
-<th>cond1</th>
-<th>cond2</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>this</td>
-<td>birthDate</td>
-<td>gender</td>
-</tr>
-<tr>
-<td>must be</td>
-<td>greater than</td>
-<td>equal to</td>
-</tr>
-<tr>
-<td>to this</td>
-<td>34124235</td>
-<td>male</td>
-</tr>
-</tbody>
-</table>
-<br>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">orKeys</th>
-<th style="text-align:center">cond1</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">this</td>
-<td style="text-align:center">name</td>
-</tr>
-<tr>
-<td style="text-align:center">must be</td>
-<td style="text-align:center">equal to</td>
-</tr>
-<tr>
-<td style="text-align:center">to this</td>
-<td style="text-align:center">ali</td>
-</tr>
-</tbody>
-</table>
-<p>in otherwords last example returns all doctors whose are male and they are older than 34124235Ts <em>or</em> everybody whose name is ali</p>
 <p><img src="https://raw.githubusercontent.com/kia-nasirzadeh/ashkan-nasirzadeh.ir/gh-pages/_posts/colife-backend/searchWithConds.png" alt=""></p>
 <hr>
 <h3 id="search">search</h3>
@@ -429,6 +357,107 @@ content-type: application/json
 <p>above example returns everybody who his first or last name included &quot;a&quot;</p>
 <p><img src="https://raw.githubusercontent.com/kia-nasirzadeh/ashkan-nasirzadeh.ir/gh-pages/_posts/colife-backend/search.png" alt="">
 <img src="https://raw.githubusercontent.com/kia-nasirzadeh/ashkan-nasirzadeh.ir/gh-pages/_posts/colife-backend/listPersons%26MainPage.png" alt=""></p>
+<hr>
+<h3 id="create-an-expertise">create an expertise</h3>
+<pre><code><code><div>POST http://{{host}}/expertise
+Content-Type: application/json
+
+{
+    &quot;name&quot;: &quot;my expertise&quot;
+}
+
+</div></code></code></pre>
+<h3 id="get-all-expertises">get all expertises</h3>
+<pre><code><code><div>Get http://{{host}}/expertise
+</div></code></code></pre>
+<h3 id="get-an-expertise-by-id">get an expertise by id</h3>
+<pre><code><code><div>Get http://{{host}}/expertise/61c6ff0be9b848f08a79259c
+</div></code></code></pre>
+<h3 id="update-an-expertise">update an expertise</h3>
+<pre><code><code><div>Put http://{{host}}/expertise/61c6ff0be9b848f08a79259c
+Content-Type: application/json
+
+{
+    &quot;name&quot;: &quot;updated expertise name&quot;
+}
+</div></code></code></pre>
+<h3 id="delete-an-expertise">delete an expertise</h3>
+<pre><code><code><div>Delete http://{{host}}/expertise/61c6ff0be9b848f08a79259c
+</div></code></code></pre>
+<h3 id="godsearch">godSearch</h3>
+<pre><code><code><div>{
+    &quot;entityName&quot;: &quot;personnel&quot;,
+    &quot;filters&quot;: {
+        &quot;ands&quot;: [
+            [&quot;name&quot;, &quot;a&quot;, &quot;&quot; ]
+        ],
+        &quot;ors&quot;: [
+            [&quot;job&quot;, &quot;b&quot;, &quot;~&quot; ]
+        ]
+    },
+    &quot;groupBy&quot;: &quot;job&quot;,
+    &quot;limit&quot;: 1,
+    &quot;page&quot;: 1
+}
+</div></code></code></pre>
+<p>lets see some examples:
+1- just get doctors list :)</p>
+<pre><code><code><div>{
+    &quot;entityName&quot;: &quot;personnel&quot;,
+    &quot;limit&quot;: 10,
+    &quot;page&quot;: 1
+}
+</div></code></code></pre>
+<p>2- search everyone who has &quot;g&quot; in his name in personnel entites:</p>
+<pre><code><code><div>{
+    &quot;entityName&quot;: &quot;personnel&quot;,
+    &quot;filters&quot;: {
+        &quot;ands&quot;: [
+            [&quot;name&quot;, &quot;g&quot;, &quot;~&quot; ]
+        ]
+    },
+    &quot;limit&quot;: 10,
+    &quot;page&quot;: 1
+}
+</div></code></code></pre>
+<p>3- search everyone who has &quot;a&quot; in his name in all entites:</p>
+<pre><code><code><div>{
+    &quot;filters&quot;: {
+        &quot;ands&quot;: [
+            [&quot;name&quot;, &quot;a&quot;, &quot;&quot; ]
+        ]
+    },
+    &quot;limit&quot;: 10,
+    &quot;page&quot;: 1
+}
+</div></code></code></pre>
+<p>4- group by gender and search everyone who has a in his name</p>
+<pre><code><code><div>{
+    &quot;filters&quot;: {
+        &quot;ands&quot;: [
+            [&quot;name&quot;, &quot;a&quot;, &quot;~&quot; ]
+        ]
+    },
+    &quot;groupBy&quot;: &quot;gender&quot;,
+    &quot;limit&quot;: 10,
+    &quot;page&quot;: 1
+}
+</div></code></code></pre>
+<p>5- filter by everybody whoose idCardNumber is above 9 or everyone whoose job is a programmer in all entities and then and in that list search for everybody who has a in his name</p>
+<pre><code><code><div>{
+    &quot;filters&quot;: {
+        &quot;ands&quot;: [
+            [&quot;name&quot;, &quot;a&quot;, &quot;&quot; ],
+            [&quot;idCardNum&quot;, &quot;9&quot;, &quot;&gt;&quot; ]
+        ],
+        &quot;ors&quot;: [
+            [&quot;job&quot;, &quot;programmer&quot;, &quot;=&quot; ]
+        ]
+    },
+    &quot;limit&quot;: 10,
+    &quot;page&quot;: 1
+}
+</div></code></code></pre>
 <hr>
 <h2 id="modules-relations">modules relations</h2>
 <p><img src="https://i.imgur.com/mD7aFRO.png" alt=""></p>
