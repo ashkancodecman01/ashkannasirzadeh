@@ -385,35 +385,20 @@ Content-Type: application/json
 <pre><code><code><div>Delete http://{{host}}/expertise/61c6ff0be9b848f08a79259c
 </div></code></code></pre>
 <h3 id="godsearch">godSearch</h3>
-<pre><code><code><div>{
-    &quot;entityName&quot;: &quot;personnel&quot;,
-    &quot;filters&quot;: {
-        &quot;ands&quot;: [
-            [&quot;name&quot;, &quot;a&quot;, &quot;&quot; ]
-        ],
-        &quot;ors&quot;: [
-            [&quot;job&quot;, &quot;b&quot;, &quot;~&quot; ]
-        ]
-    },
-    &quot;groupBy&quot;: &quot;job&quot;,
-    &quot;limit&quot;: 1,
-    &quot;page&quot;: 1
-}
-</div></code></code></pre>
 <p>lets see some examples:
 1- just get doctors list :)</p>
 <pre><code><code><div>{
-    &quot;entityName&quot;: &quot;personnel&quot;,
+    &quot;entityName&quot;: &quot;doctors&quot;,
     &quot;limit&quot;: 10,
     &quot;page&quot;: 1
 }
 </div></code></code></pre>
-<p>2- search everyone who has &quot;g&quot; in his name in personnel entites:</p>
+<p>2- search everyone who has &quot;a&quot; in his name in personnel entites:</p>
 <pre><code><code><div>{
     &quot;entityName&quot;: &quot;personnel&quot;,
     &quot;filters&quot;: {
         &quot;ands&quot;: [
-            [&quot;name&quot;, &quot;g&quot;, &quot;~&quot; ]
+            [&quot;name&quot;, &quot;a&quot;, &quot;~&quot; ]
         ]
     },
     &quot;limit&quot;: 10,
@@ -431,27 +416,29 @@ Content-Type: application/json
     &quot;page&quot;: 1
 }
 </div></code></code></pre>
-<p>4- group by gender and search everyone who has a in his name</p>
+<p>4- sort by gender and search everyone who has a in his name (every sort field can get &quot;asc&quot; or &quot;des&quot;)</p>
 <pre><code><code><div>{
     &quot;filters&quot;: {
         &quot;ands&quot;: [
             [&quot;name&quot;, &quot;a&quot;, &quot;~&quot; ]
         ]
     },
-    &quot;groupBy&quot;: &quot;gender&quot;,
+    &quot;sortBy&quot;: {
+        &quot;gender&quot;: &quot;asc&quot;
+    },
     &quot;limit&quot;: 10,
     &quot;page&quot;: 1
 }
 </div></code></code></pre>
-<p>5- filter by everybody whoose idCardNumber is above 9 or everyone whoose job is a programmer in all entities and then and in that list search for everybody who has a in his name</p>
+<p>5- in the list of everybody whoose family is bia or whoose username is 4, search for everybody whoose has &quot;a&quot; in his name</p>
 <pre><code><code><div>{
     &quot;filters&quot;: {
         &quot;ands&quot;: [
-            [&quot;name&quot;, &quot;a&quot;, &quot;&quot; ],
-            [&quot;idCardNum&quot;, &quot;9&quot;, &quot;&gt;&quot; ]
+            [&quot;name&quot;, &quot;a&quot;, &quot;~&quot; ]
         ],
         &quot;ors&quot;: [
-            [&quot;job&quot;, &quot;programmer&quot;, &quot;=&quot; ]
+            [&quot;family&quot;, &quot;bia&quot;, &quot;=&quot;],
+            [&quot;username&quot;, &quot;4&quot;, &quot;=&quot;]
         ]
     },
     &quot;limit&quot;: 10,
