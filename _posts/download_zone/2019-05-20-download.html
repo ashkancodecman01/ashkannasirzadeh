@@ -3,6 +3,11 @@ layout: homepage
 permalink: /download_zone
 ---
 <!-- 1- put your file on /assets/downloads -->
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
 <style>
   body {
     background-color: black;
@@ -41,9 +46,12 @@ vmess://eyJ2IjoiMiIsInBzIjoiS2lhU2VydmVyc18xMDEiLCJhZGQiOiIxNzguNzkuMTQ5LjE2NiIs
   const copyContent = async () => {
     try {
       await navigator.clipboard.writeText(text);
-      console.log('Content copied to clipboard');
+      alert('کانفیگ کپی شد حالا لطفا برو تو napstern یا http injector یا v2rayNg و پیستش کن');
     } catch (err) {
       console.error('Failed to copy: ', err);
     }
   }
 </script>
+    
+  </body>
+</html>
