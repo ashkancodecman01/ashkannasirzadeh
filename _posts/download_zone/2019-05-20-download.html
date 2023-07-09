@@ -33,3 +33,17 @@ permalink: /download_zone
 vmess://eyJ2IjoiMiIsInBzIjoiS2lhU2VydmVyc18xMDEiLCJhZGQiOiIxNzguNzkuMTQ5LjE2NiIsInBvcnQiOiI3NjE3IiwiaWQiOiIyYWExODBjZC1kM2I2LTQyNGMtYTNlZC1kMjY1ZDYyMjFkZGUiLCJhaWQiOiIwIiwibmV0Ijoia2NwIiwidHlwZSI6IndpcmVndWFyZCIsInBhdGgiOiIiLCJhbHBuIjoiIiwiaG9zdCI6IiIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIifQ==
   
 </div>
+<p id="myText" style="display:none">vmess://eyJ2IjoiMiIsInBzIjoiS2lhU2VydmVyc18xMDEiLCJhZGQiOiIxNzguNzkuMTQ5LjE2NiIsInBvcnQiOiI3NjE3IiwiaWQiOiIyYWExODBjZC1kM2I2LTQyNGMtYTNlZC1kMjY1ZDYyMjFkZGUiLCJhaWQiOiIwIiwibmV0Ijoia2NwIiwidHlwZSI6IndpcmVndWFyZCIsInBhdGgiOiIiLCJhbHBuIjoiIiwiaG9zdCI6IiIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIifQ==</p>
+<button class="btn" onclick="copyContent()">کپی کردن کانفیگ</button>
+
+<script>
+  let text = document.getElementById('myText').innerHTML;
+  const copyContent = async () => {
+    try {
+      await navigator.clipboard.writeText(text);
+      console.log('Content copied to clipboard');
+    } catch (err) {
+      console.error('Failed to copy: ', err);
+    }
+  }
+</script>
